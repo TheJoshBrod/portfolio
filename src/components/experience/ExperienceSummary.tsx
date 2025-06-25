@@ -33,13 +33,13 @@ export default function ExperienceSummary({
   return (
     <>
       {isSelected ? (<motion.div
-      initial={{ opacity: 0, x: 50 }}
-      animate={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-        <div className="bg-white p-6 h-120 rounded-lg shadow-lg w-170 text-right m-5 fadeslide">        
+        <div className="bg-[#c4c1ff] p-6 h-120 rounded-lg shadow-lg w-173 m-5 fadeslide border-6 border-[#36355e]">        
                 {/* Role */}
-                <div className="flex justify-end items-center">
+                <div className="flex items-center">
                     <h2 className="text-gray-800 text-lg font-bold">
                         {role}
                     </h2>
@@ -50,12 +50,16 @@ export default function ExperienceSummary({
                     {organization} | {timespan}
                 </p>
                 
+                {/* <div className="w-100 h-0.5 mt-5 bg-black"></div> */}
+
                 {/* Skills */}
                 {
                     skills ? 
-                        <div className="flex">
-                            {skills.map((skill, index) => (<SkillTag key={index} name={skill}></SkillTag>))}
-                        </div> 
+                        <div className="h-12 w-170 mt-2 relative left-[-24] flex items-center bg-[#36355e]">
+                            <div className="relative left-6 flex">
+                                {skills.map((skill, index) => (<SkillTag key={index} name={skill}></SkillTag>))}
+                            </div> 
+                        </div>
                     :
                         <></>
                 }
@@ -65,13 +69,22 @@ export default function ExperienceSummary({
                     {props.about}
                 </p> */}
 
+                
+
                 {/* Highlight Bullets */}
                 {highlights ? 
                     <div className="mt-2">
-                        <h2 className="text-left text-xl font-bold">Impact</h2>
-                        <ul className="list-disc list-inside text-left">
-                            {highlights.map((highlight, index) => (<li key={index}>{highlight}</li>))}
-                        </ul>
+                        {/* <h2 className="text-left text-xl font-bold"></h2> */}
+                        <div className="flex flex-col text-left">
+                            
+                            {highlights.map((highlight, index) => (
+                                <div key={index} className="flex m-5">
+                                    <p className="text-xl font-extrabold mr-5">+&nbsp;</p>
+                                    <p>{highlight}</p>
+                                </div>
+                            ))}
+                            
+                        </div>
                     </div> 
                     : 
                     <></>

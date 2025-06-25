@@ -10,11 +10,11 @@ export default function ExperienceSection() {
 
 
   return (
-      <div id="experience" className="flex flex-col items-center pt-10">
-        <div className='w-250'>
+      <div id="experience" className="flex flex-col items-center">
+        <div className='w-250 mt-10'>
           <div className="text-center m-8 h-28 flex flex-col justify-center bg-[#37345d] p-10 rounded-lg shadow-lg">
-            <p className="text-xl font-bold text-[#7d7fa6]">My Professional Journey</p>
-            <h1 className="text-4xl font-bold text-[#7d7fa6]">Work Experience</h1>
+            <p className="text-xl font-bold text-[#c5bfff]">My Professional Journey</p>
+            <h1 className="text-4xl font-bold text-[#c5bfff]">Work Experience</h1>
           </div>
         </div>
         
