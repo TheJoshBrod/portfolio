@@ -17,11 +17,11 @@ export default function Education() {
                       <div className=" timeline-body w-130 h-56 mr-10 mt-10 p-4 bg-[#c4c1ff] border-[#37345d] border-6 rounded-2xl">
                         <div className="flex flex-row justify-between">
                             <h1 className="font-bold text-lg">MSE Computer Science</h1>
-                            <p className="font-bold">Spring 2026</p>
+                            <h1 className="font-bold">Spring 2026</h1>
                         </div>
                         <div className="flex flex-row justify-between">
-                            <p className="font-semibold">University of Michigan&nbsp;</p>
-                            <p className="font-semibold">GPA: 3.61</p>
+                            <h3 className="font-semibold">University of Michigan&nbsp;</h3>
+                            <h3 className="font-semibold">GPA: 3.61</h3>
                         </div>
                         <div className="flex flex-col mt-1">
                             <p className="font-normal underline decoration-0 underline-offset-4 mb-1">Coursework:</p>
@@ -44,11 +44,11 @@ export default function Education() {
                     <div className="w-130 h-56 p-4 bg-[#c4c1ff] timeline-body border-[#37345d] border-6 rounded-2xl">
                 <div className="flex flex-row justify-between">
                     <h1 className="font-bold text-lg">BSE Computer Science</h1>
-                    <p className="font-bold">Spring 2025</p>
+                    <h1 className="font-bold">Spring 2025</h1>
                 </div>
                 <div className="flex flex-row justify-between">
-                    <p className="font-semibold">University of Michigan&nbsp;</p>
-                    <p className="font-semibold">GPA: 3.66</p>
+                    <h3 className="font-semibold">University of Michigan&nbsp;</h3>
+                    <h3 className="font-semibold">GPA: 3.66</h3>
                 </div>
                 <div className="flex flex-col mt-1">
                     <p className="font-normal underline decoration-0 underline-offset-4 mb-1">Coursework:</p>
