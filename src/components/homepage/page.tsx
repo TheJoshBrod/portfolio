@@ -1,79 +1,402 @@
+'use client';
+
 import { motion } from 'framer-motion';
 
 export default function Header() {
 
-  return (
-    <div className="relative min-h-screen bg-gray-950 text-white overflow-hidden">
+  // Starry Night ASCII Art Templates
+  const asciiArt1 = `
+                                                     +                                          +                  o                       .          
+                                    *                           *               .                                  +                                  
+                                       .*                  .-'""'-.                                                                                   
+           +                         '             .:'   .' () .   '.    .                                                                            
+    +                           +              _.::'    / .      o   \\\\                 o                                 *         .                  
+          .               +        /          (_.'     ; o    _   ()  ;                                                                               
+                         .        / .                  ;     (_)      ;                                                          *                    
+                                 *                      \\\\ .        o /          .'                       .                     +                      
+    '  .                                                 '.  O  .  .'            .                                           o                        
+  .                    +                   +       '       '-....-'                                                      '                            
+~~+                                                            '                                                   .        '                         
+                                                                                                              _..   .              +   '              
+                                                                                .    +                      '\\\\\`-. \\\\\`.                                   
+                                         .                                                        |             \\\\  \\\\       '          |               
+                                                               '         .                      --o--           |  |                 -+-   *    .     
+            '                         *   |                  .                                    |             /  /                  | o             
+                                        - o -                                    .                ' .       _.-\\\\\`_.\\\\\`            o                      
+                            .             |   '          '   .                  +~~                          '''             .   .                    
+                           o                 +                         .       .                             .                             .          
+                                                          .                      .            .                                                       
+                                                .                '                                                       .                            
+                                                                     +                                                                                
+                         .                             *         .              +    '                                                .               
+         '                            o                                                                                 o            '           o    
+                  /.  '                                                                  '                   + '                   '                  
+                 /                                                                                              .                ' +         |        
+   '            *                                                                               '                         +                 -+-       
+                         .                                                                     *          *                                ' |        
+                                                                                                                                                  +   
+                                             +       +                    .         .._     .                 '                                       
+                   .   ':.                +                                       .' .-'\\\\\`                       +                                     
+                         '::._                                                   /  /                        ''         '                        .    
+                           '._)                                            o     |  |                                                  +              
+                              .                                                  \\\\  \\\\                                                                 
+                             .                                                    '._'-._   +         .            ':.                                
+                                                      o      .+~~                    \\\\\`\\\\\`\\\\\`                             '::._              +             
+         +                   '   +~~                                                       .                           '._)            _|_    '       
+                                   ~~+                 +.           .  o                                                           '    |             
+                                                                    '       .:'   .   .                               +                               
+      |             *       .._                   o                     _.::'                           *              o     |                        
+     -o-             .    .' .-'\\\\\`                                      (_.'                          +           *         --o--                      
+ '.   |                  /  /          .*   .         .         * .                          .                .        +     |                        
+      . *    '           |  |                                    +                     '        +                                                     
+          +        +     \\\\  \\\\                                                                                       *                                 
+     ~~+        '         '._'-._                                                                             +             '                       ' 
+                             \\\\\`\\\\\`\\\\\`        .      .                         *                                              '                             
+                                                                             *                      '                                         '       
+                  .                      |                             o                       .                             +                        
+        o *                            - o -        .                                                                                                 
+                                         |                                                                                                            
+            .                                 .                                        *                                                              
+                                         .                                  +~~                   .                                                   
+                                                                                                                                                      
+                           .                                 .                                      .                           o                     
+                                                                 *          +                    |                                .+         ':.      
+            *                                             _..                                  --o--  '                 +   |                  '::._  
+   +         +          '     '                  '      '\\\\\`-. \\\\\`.                        |         |   '                    --o--                  '._) 
+                                    \\\\                   .   \\\\  \\\\                     - o -                          +       |                         
+*       .                            \\\\                      |  |o                  +   |    '                                           +   .         
+            '               .         *     '.              /  /           +                                                                          
+                                                .._     _.-\\\\\`_.\\\\\`                                                      .     .                          
+                              o          +    .' .-'\\\\\`    '''                                                                                          
++~~                          +               /  /        +  +                                               .      '                                  
+                           '       *         |  |   + +                                                                                               
+                                    o        \\\\  \\\\                                                 +                                                   
+                                 ' .  .       '._'-._            *                                     o                                              
+                                    .            \\\\\`\\\\\`\\\\\`                                                   '       |    .                         o       
+  .     .       *                                                  .                        +                 -o-                                     
+'       +                                                                 .                                    |          _..                 .       
+                                                                     '                   '                  .           '\\\\\`-. \\\\\`.          '            
+     .                                                                                                                      \\\\  \\\\'                     
+                                                                                                                            |  |                      
+  /                                                                                                                         /  /             .   +    
+ /                           +         _..                                                    '                         _.-\\\\\`_.\\\\\`                      .
+*                      .             '\\\\\`-. \\\\\`.      *                                              +                       '''                   .      
+                                         \\\\  \\\\                                                                                                         
+                                         |  |                                         .                                                               
+                        .                /  /          +     '                                                     *                .       '         
+                                     _.-\\\\\`_.\\\\\`               +                         .                      +     +                   o               
+                                      '''                                                                   +                                         `;
 
-      {/* Background Gradients */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-900/30 rounded-full blur-[128px]" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-900/30 rounded-full blur-[128px]" />
-      </div>
+  const asciiArt2 = `
+                                      '                 '                             .   /                  .                         \\              
+       +                                         '                                       /               +              +~~             \\             
+         o                    .                                                         *                                                *            
+4:              *                                                                                                                                        
+          '                *                                         .                 '                         .        .                   .        
+                                                                                                                                                      
+                              *   +                      o                                                           * 'o                           . 
+                                                                                                    *                                                 
+    +                                                                     . '               .                                     |                   
+                                   '           '           *                 |                     .                            - o -                 
+                o   .          .                        +     +            - o -                                                  |                .  
+                              .                            *                 |                             '                                          
+                                 o       .                                    o       o                .                 *             .              
+                                         .        '                         .                        ':.                        +                     
+                                                         .         .                                   '::._                +                         
+                          |                  .      '                         +                          '._) '         .                     +       
+                        - o -                                           o  .                                                            o             
+               .          |            +                                      '    +                  _|_                        +                   '
+          .:'                                '                           '                             |                                              
+      _.::'                                         '                                      ~~+           +                                     +      
+     (_.'                                                               *                    '  .       ':.                 '       '                 
+                                                       +                  +                               '::._            .                          
+       .                                                                                     o  o           '._)                                    + 
+                                                                                                                  .                                   
+         .                                                             '     +                                  .-'""'-.          '                   
+          +                              ':.          '   ' +            '                                    .' () .   '.                            
+ .                       '                 '::._                                         .   +               / .      o   \\             .             
+             .  *                  '         '._) +                                            .            ; o    _   ()  ;                          
+                                                                    *                                       ;     (_)      ;                          
+                                                *                    +                                       \\ .        o /          '               .
+        .                 o      o   '                                                                     '  '.  O  .  .'      '             ..      
+ '                              |                                                                         .     '-....-'     . o                      
+             _..              - o -                    +~~                                                                                            
+           '\\\`-. \\\`.              |                                                                      *                                          *   
+               \\  \\                      .                                             +               '                                 '  .         
+               |  |    o                  +                  +                        .        '                 '                                    
+               /  /    .                         . *                             +                                  .                                 
+      .    _.-\\\`_.\\\`                             .                                                                                                      
+       _|_  '''                 * .                 .                                            '   *      '    +                +                   
+        |                                       +                       |   '         .   .                                                           
+                .                       '                             - o -                                          .                          .     
+                             +              *                           |                                                                .        .   
+        .      .._                                                                             *                             .                        
+           ' .' .-'\`                                     '    .             +                                      '                             +    
+            /  /                 '        .  +            +              +                            .                                         .     
+            |  |                                                                                                                       .              
+            \\  \\        '                                                                                                     .        ':.            
+    .        '._'-._  ' o                                                                                             _..                '::._        
+                \`\`\`         .                                                                                       '\\\`-. \\\`.                '._)       
+                               .                    '        o                                                          \\  \\                          
+       .                                                                                                                |  |                          
+                                                 .                         _|_                       .                  /  /                          
+                 .   .                        +                             |                                       _.-\\\`_.\\\`                           
+'                                  /                                                    .                            '''           +  '               
+                            .     /  '                                                        .         .        +                                    
+                                 *          .                                                                                                         
+                                                                            .                                '    o                                   
+                                                                                                                                                .     
+                           '                                               '       '  .                             '                                 
+                                                /                    .          *                        .              *                             
+                                               /           +            _|_                                                      o                    
+                         |                    *                 .        |                                                                            
+                       --o--    .                                                          +                                  +                       
+                         |                o              +                                                      +                      '              
+                    '                        .              .                                      o                                                  
+                                                       .               '                                                                              
+                      o      .                  .                                                 . ':.                                    .*         
+                                                       .        .                  .                  '::._           _|_                             
+                                                      o     +                                           '._)           |                              
+                                                +~~                                     +                                                             
+    '                       . |                           .        +                 *              +              ~~+           .                    
+                             -+-                        +                   '  o         '                                    o                       
+                              |             *                                                                            o                            
+                         *                 +                        .                                                       .           .:'           
+                                                                                                          .                  .      _.::'             
+                                                                                          +                                        (_.'               
+    ~~+                    *                           .                                                                                              
+                       '                    '                                          '         '               o         '                          
+                                                     '                                             '                                                  
+                             *                                                               +                                                        `;
 
-      {/* Intro Section */}
-      <div data-name="header-intro" id="home" className="relative z-10 h-screen flex flex-col justify-center items-center px-4">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-10 w-full max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="flex flex-col items-start gap-4 flex-1 order-2 md:order-1"
-          >
-            <h1 className="text-6xl md:text-8xl font-bold tracking-tighter">Hey,</h1>
-            <div className="flex flex-wrap items-baseline gap-4">
-              <h1 className="text-6xl md:text-8xl font-bold tracking-tighter">I'm</h1>
-              <h1 className="text-6xl md:text-8xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-orange-400">Josh!</h1>
-            </div>
-            <div className="mt-4 space-y-2">
-              <p className="text-2xl md:text-3xl font-light text-gray-300">CS MSE @ University of Michigan 〽️</p>
-              <p className="text-xl md:text-2xl text-gray-400">Software engineer interested in AI/ML development</p>
-            </div>
+  const asciiArt3 = `
+                                                     +                                          +                  o                       .          
+                                    *                           *               .                                  +                                  
+                                       .*                  .-'""'-.                                                                                   
+           +                         '             .:'   .' () .   '.    .                                                                            
+    +                           +              _.::'    / .      o   \\\\                 o                                 *         .                  
+          .               +        /          (_.'     ; o    _   ()  ;                                                                               
+                         .        / .                  ;     (_)      ;                                                          *                    
+                                 *                      \\\\ .        o /          .'                       .                     +                      
+    '  .                                                 '.  O  .  .'            .                                           o                        
+  .                    +                   +       '       '-....-'                                                      '                            
+~~+                                                            '                                                   .        '                         
+                                                                                                              _..   .              +   '              
+                                                                                .    +                      '\\\\\`-. \\\\\`.                                   
+                                         .                                                        |             \\\\  \\\\       '          |               
+                                                               '         .                      --o--           |  |                 -+-   *    .     
+            '                         *   |                  .                                    |             /  /                  | o             
+                                        - o -                                    .                ' .       _.-\\\\\`_.\\\\\`            o                      
+                            .             |   '          '   .                  +~~                          '''             .   .                    
+                           o                 +                         .       .                             .                             .          
+                                                          .                      .            .                                                       
+                                                .                '                                                       .                            
+                                                                     +                                                                                
+                         .                             *         .              +    '                                                .               
+         '                            o                                                                                 o            '           o    
+                  /.  '                                                                  '                   + '                   '                  
+                 /                                                                                              .                ' +         |        
+   '            *                                                                               '                         +                 -+-       
+                         .                                                                     *          *                                ' |        
+                                                                                                                                                  +   
+                                             +       +                    .         .._     .                 '                                       
+                   .   ':.                +                                       .' .-'\\\\\`                       +                                     
+                         '::._                                                   /  /                        ''         '                        .    
+                           '._)                                            o     |  |                                                  +              
+                              .                                                  \\\\  \\\\                                                                 
+                             .                                                    '._'-._   +         .            ':.                                
+                                                      o      .+~~                    \\\\\`\\\\\`\\\\\`                             '::._              +             
+         +                   '   +~~                                                       .                           '._)            _|_    '       
+                                   ~~+                 +.           .  o                                                           '    |             
+                                                                    '       .:'   .   .                               +                               
+      |             *       .._                   o                     _.::'                           *              o     |                        
+     -o-             .    .' .-'\\\\\`                                      (_.'                          +           *         --o--                      
+ '.   |                  /  /          .*   .         .         * .                          .                .        +     |                        
+      . *    '           |  |                                    +                     '        +                                                     
+          +        +     \\\\  \\\\                                                                                       *                                 
+     ~~+        '         '._'-._                                                                             +             '                       ' 
+                             \\\\\`\\\\\`\\\\\`        .      .                         *                                              '                             
+                                                                             *                      '                                         '       
+                  .                      |                             o                       .                             +                        
+        o *                            - o -        .                                                                                                 
+                                         |                                                                                                            
+            .                                 .                                        *                                                              
+                                         .                                  +~~                   .                                                   
+                                                                                                                                                      
+                           .                                 .                                      .                           o                     
+                                                                 *          +                    |                                .+         ':.      
+            *                                             _..                                  --o--  '                 +   |                  '::._  
+   +         +          '     '                  '      '\\\\\`-. \\\\\`.                        |         |   '                    --o--                  '._) 
+                                    \\\\                   .   \\\\  \\\\                     - o -                          +       |                         
+*       .                            \\\\                      |  |o                  +   |    '                                           +   .         
+            '               .         *     '.              /  /           +                                                                          
+                                                .._     _.-\\\\\`_.\\\\\`                                                      .     .                          
+                              o          +    .' .-'\\\\\`    '''                                                                                          
++~~                          +               /  /        +  +                                               .      '                                  
+                           '       *         |  |   + +                                                                                               
+                                    o        \\\\  \\\\                                                 +                                                   
+                                 ' .  .       '._'-._            *                                     o                                              
+                                    .            \\\\\`\\\\\`\\\\\`                                                   '       |    .                         o       
+  .     .       *                                                  .                        +                 -o-                                     
+'       +                                                                 .                                    |          _..                 .       
+                                                                     '                   '                  .           '\\\\\`-. \\\\\`.          '            
+     .                                                                                                                      \\\\  \\\\'                     
+                                                                                                                            |  |                      
+  /                                                                                                                         /  /             .   +    
+ /                           +         _..                                                    '                         _.-\\\\\`_.\\\\\`                      .
+*                      .             '\\\\\`-. \\\\\`.      *                                              +                       '''                   .      
+                                         \\\\  \\\\                                                                                                         
+                                         |  |                                         .                                                               
+                        .                /  /          +     '                                                     *                .       '         
+                                     _.-\\\\\`_.\\\\\`               +                         .                      +     +                   o               
+                                      '''                                                                   +                                         `;
 
-            <div className="flex gap-6 mt-8">
-              {/* Social Media Icons with Glass Effect */}
-              {[
-                { src: "contact_logo/github-color.png", alt: "GitHub" },
-                { src: "contact_logo/linkedin-color.png", alt: "LinkedIn" },
-                { src: "contact_logo/mail-color.png", alt: "Email" },
-              ].map((social, idx) => (
-                <a key={idx} href="#" className="p-3 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 hover:scale-110 transition-all cursor-pointer">
-                  <img src={social.src} alt={social.alt} className="w-8 h-8 opacity-80 hover:opacity-100 transition-opacity" />
-                </a>
-              ))}
-            </div>
-          </motion.div>
+  const asciiArt4 = `
+   .                          .                                          '                     *      +                                       '
+                                            .        '       +~~                                  '                .   .                              
+                        .                         .                      +                                                   +~~                   o  
+            +                                                                                                                                         
+                                                                                 .                                                '      | o   '      
+                         *            . '                  .:'                       .        '                                        --o--          
+          .                           .                _.::'                                .                          +~~               |            
+                         .                            (_.'                                              *   o.                                        
+         .     |                                       '                                             ' *  '.                     '                    
+  o .         -+-   .                                               .          '                                                                      
+               |                                +                                 '                                              '    '.              
+                                                                                                                                       .        |     
+                                          +                                                                                                    -o-    
+      *      '.        .                                                      '                                                                 |     
+                              .                             .                                                     *        o                          
+                    '          .:'                                        . .            .                                                            
+                           _.::'                                                                                                                      
+                          (_.'                o                   .                                                       .         '                 
+                                                    .       o                          '                    .                              .          
+    *  .                                                                      .                                            _..         .              
+  ':.                                                                                                               .    '\\\`-. \\\`. o                 '  
+    '::._          ~~+'                                                                        +                             \\  \\                     
+      '._)                                                     '             +                                .              |  |            *        
+                                                   .             .-'""'-.       _|_                                          /  /                     
+          o                               +          .      '  .' () .   '.      |                                       _.-\\\`_.\\\`                      
+                                               +              / .      o   \\                 *                      .     '''                      .  
+                                 '                           ; o    _   ()  ;                                      .                       .          
+      ''                                                     ;     (_)      ;                            +                                            
+              '                                    +          \\ .        o /                                             *                            
+                       o  .                  o                 '.  O  .  .'                                                                           
+         '                  /       '                  .:'       '-....-'                                  .                                   +      
+          *                /                       _.::'     .               '                 +                 +                                    
+                           *                      .(_.'                             o                                                           +~~ .  
+  |                    .-'""'-.                  .             '                                            +                                       * 
++-o-                 .' () .   '.                  .                '   '                                                        .                    
+  |                 / .      o   \\                                                                      '            o                      +         
+                   ; o    _   ()  ;                                               .                                  o                              * 
+                   ;     (_)      ;                                                                                      .                        +   
+                   ;     (_)      ;                                                                                      .                        +   
+                   ;     (_)      ;                                                                                      .                        +   
+                    \\ .        o /                           .                    .                                                                   
+   .          *      '.  O  .  .'                                                  '                          '*                                      
+                       '-....-'         .                      .                     '           +             '        +     .                       
+           _|_  +                                    '            '                                        .                                          
+            |           +                                   '  .-'""'-.                    .                                              '           
+                                                             .' () .   '.                                                                             
+                              '                  .  '   +   / .      o   \\                                                                            
+            '                   o    +   .            |  + ; o    _   ()  ;          .:'                                                              
+                                                    --o--  ;     (_)      ;      _.::'        +            .                                          
+                         .                  .         |     \\ .        o /      (_.'               '                           +               '      
+                                       .     .               '.  O  .  .'                                             o   .                         + 
+                                                 +       *     '-....-'     '                                         .                               
+                                                             .         .                                                       o                      
+       o                                                                                        .                             +                       
+      .:'   '      .                  +      .                       '                                             '                                  
+  _.::'                                                              .                      +     *                                                   
+ (_.'                                              .                                                      .                                           
+                                                                                                                          '                           
+       +             .                           .                   . .         +                                                                    
+         '                                        .                                                             *                                     
+                                                  +                          '    +                           +         +                             
+                      ' .                           '                                                                     o                         . 
+                       .                                           '                          '                        o                           \\  
+                            +         .                              '                                   .                                          \\ 
+                                                                                                                                                     *
+         o                                                   .                                                                                     o  
+                                                          .                                    .                                                      
+                 +                                          +       +                  *            .                                                 
+                      .                                                                 +                                                +       '   '
+                                          '                                                                                                           
+                                                                                                                                                      
+                                                                                                                                           .          
+                                         _|_           .                                                       .   o       '      *             .     
+                                          |                                        +~~              .                                                 
+                  +  . .   '    *                                                                                                                     
+              ~~+ '                                      |                                                           .              +                 
+          /                   *                         -+-                                                         '                                 
+         / .           . .                               |            '                                              |            *                   
+o     . * +                              .o       .                           ..                                   - o -                              
+                                         _|_      .                      +                                  '        |      |                         
+                                      +~~ |                                                                                -o-                        
+                                                                  '                     *+                                  |                         `;
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="order-1 md:order-2"
-          >
-            <div className="relative w-64 h-64 md:w-96 md:h-96">
-              <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
-              <img src="option3.png" className='relative w-full h-full object-cover border-4 border-white/10 shadow-2xl rounded-full' alt="Profile" />
-            </div>
-          </motion.div>
+  return (<>
+    <div className="min-h-screen w-full relative overflow-hidden bg-[#111]">
+
+      {/* Starry Night Background: Tiled and Low Opacity */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none opacity-[0.3] flex items-center justify-center">
+        <div className="flex flex-wrap w-[200vw] -ml-[50vw] -mr-[50vw] justify-center gap-0">
+          {Array(30).fill([asciiArt1, asciiArt2, asciiArt3, asciiArt4]).flat().map((art, i) => (
+            <pre key={i} className="text-[6px] md:text-[8px] leading-[1.0] text-gray-500 font-mono whitespace-pre text-center">
+              {art}
+            </pre>
+          ))}
         </div>
       </div>
 
-      {/* Navigation Bar */}
-      <div data-name="header-navigation" className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
-        <nav className="flex items-center gap-1 px-2 py-2 bg-gray-900/80 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl">
-          {['home', 'aboutme', 'experience', 'portfolio', 'contact'].map((item) => (
-            <a
-              key={item}
-              href={`#${item}`}
-              className="px-6 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all capitalize"
-            >
-              {item.replace('aboutme', 'About Me')}
-            </a>
-          ))}
-        </nav>
+      {/* Simple Text Navbar */}
+      <div className="max-w-5xl mx-auto p-8 md:p-16 flex flex-col relative z-10 h-full">
+        <div className="flex flex-row justify-center ">
+          <nav className="flex gap-6 text-sm mb-24 text-gray-500 font-mono">
+            {['about', 'experience', 'portfolio', 'contact'].map((item) => (
+              <a
+                key={item}
+                href={`#${item == 'about' ? 'aboutme' : item}`}
+                className="hover:text-white transition-colors"
+              >
+                [{item}]
+              </a>
+            ))}
+          </nav>
+        </div>
+
+        {/* Social Media Navbar */}
+        <div className="flex flex-col items-center text-center gap-12 mt-20 relative z-10">
+          <div className="flex flex-col gap-6 max-w-2xl">
+            <div>
+              <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight text-white">Josh</h1>
+              <p className="text-gray-400 text-base md:text-lg font-mono">CS MSE @ University of Michigan</p>
+            </div>
+
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl mx-auto">
+              I build intelligent systems and digital tools. Currently exploring <span className="text-white">Applied AI</span> and <span className="text-white">LLM Applications</span>.
+              I like keeping things simple, functional, and efficient.
+            </p>
+
+            <div className="flex justify-center gap-8 text-sm mt-6 text-gray-500 font-mono">
+              {[
+                { name: "GitHub", url: "https://github.com/thejoshbrod" },
+                { name: "LinkedIn", url: "https://www.linkedin.com/in/joshua-brodsky/" },
+                { name: "Arxiv", url: "https://arxiv.org/search/cs?searchtype=author&query=Brodsky,+J" },
+                { name: "Email", url: "#contact" }
+              ].map((link, i) => (
+                <a key={i} href={link.url} className="border-b border-gray-800 hover:border-gray-200 hover:text-white transition-all pb-0.5">
+                  {link.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-  );
+    <div className="absolute left-0 w-full overflow-hidden text-gray-600 font-mono text-xl select-none opacity-80 whitespace-nowrap z-20 text-center">
+      {Array(400).fill("~").join("")}
+    </div>
+  </>);
 }
-
-

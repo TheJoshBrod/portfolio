@@ -1,0 +1,64 @@
+[
+    {
+        "id": 1,
+        "organization": "North Atlantic Industries",
+        "role":         "AI Software Engineer Intern",
+        "logo":         "naii.png",
+        "timespan":     "May 2025 - Aug 2025",
+        "about":        "I was a swe embedded engineer radadadadada",
+        "skills":         ["RAG", "GraphRAG", "AI-Agents", "MCP", "AWS", "PostgreSQL", "Python", "Docker", "Jenkins"],
+        "highlights":   [
+                            "Developed LLM-Agentic Retrieval-Augmented Generation (RAG) system using both VectorRAG and GraphRAG to automate customer hardware documentation search and sample code generation",
+                            "Automated ingestion pipelines for structured and unstructured data using relational and graph databases (RDS & Neptune) with Jenkins to allow system to intelligently ",
+                            "Developed MCP based infrastructure allowing for subagents to interact with tool calls such as graph database traversal, and dynamic model selection, unstructured data summarization",
+                            "Developed quantitative analytics for LLM System using automated code generation pipeline to build, compile, and validate output with estimated ~95% performance."
+
+                        ]
+    },
+    {
+        "id": 5,
+        "organization": "Jaseci (University of Michigan)",
+        "role":         "Researcher",
+        "logo":         "michigan.ico",
+        "timespan":     "May-Aug 2024",
+        "skills":         ["RAG", "Python", "Langchain", "OpenAI"],
+        "about":        "I was a swe embedded engineer radadadadada"
+    },
+    {
+        "id": 4,
+        "organization": "North Atlantic Industries",
+        "role":         "Embedded Software Engineer Intern",
+        "skills":        ["QT", "C#", "C", "React"],
+        "highlights": ["Developed an API and GUI for a programmable relay-controlled resistor card to decrease time required for quality assurance testing by 66% through improving testing algorithm",
+                        "Created demo embedded applications and documentation for customers learning to perform backplane resets, handle system level interrupts, and program simulations of synchro angles through low-level registers calls", 
+                        "Implemented method for users to easily retrieve pin mappings using React to simplify hardware configuration processes of trillions of combinations of motherboard-modules"
+                    ],
+        "logo":         "naii.png",
+        "timespan":     "May 2024 - Aug 2024",
+        "about":        "I was a swe embedded engineer radadadadada"
+    },
+    {
+        "id": 3,
+        "organization": "Spark Electric Racing",
+        "role":         "Data Analytics Lead",
+        "logo":         "spark-copy.png",
+        "timespan":     "Aug 2022 - Present",
+        "skills":       ["QT", "Python", "Pandas", "Plotly"],    
+        "about":        "I was a swe embedded engineer radadadadada",
+        "highlights":   [ "Founded Spark’s Data Analytics Team, leading 10+ young professionals to process race data from an electric motorcycle, allowing other teams to detect performance issues by increasing RPM by 30%",
+                          "Structured codebase to interpret and store CAN messages in a SQL database, visualize diagnostic data creating Plotly graphs and a Dash GUI, and deliver live telemetry insights to facilitate troubleshooting",
+                          "Managed projects utilizing tools such as Git, Agile, Jira, and GitHub Issues to maintain pace, structure multiple tasks, and promote communication between other disciplines"
+                        ]
+    },
+    {
+        "id": 2,
+        "organization": "Michigan Hackers",
+        "role":         "Open Source Lead",
+        "logo":         "mhackers.ico",
+        "timespan":     "Aug 2024 - May 2025",
+        "skills": ["NextJS", "TypeScript", "PostgreSQL"],
+        "about":        "I was a swe embedded engineer radadadadada",
+        "highlights": ["Established an open-source project using the Spotify API to allow non-Spotify users to send song requests to another Spotify user's music queue",
+                        "Organized team of 4 young professionals teaching about open-source practices on GitHub utilizing forking, issues, and pull requests to allow a wider community to contribute, review, and finetune collaborative project codebases"]
+    }
+]
