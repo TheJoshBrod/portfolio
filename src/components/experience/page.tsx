@@ -6,37 +6,36 @@ import ExperienceSummary from './ExperienceSummary';
 import SectionHeader from '../general/SectionHeader'
 
 export default function ExperienceSection() {
-  
-  const[selectedExperience, setSelectedExperience] = useState(1)
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
+  const [selectedExperience, setSelectedExperience] = useState(1)
+  const ref = useRef(null);
+
+  // Adjusted margin for earlier triggering or just remove frame motion if desired, keeping simple fade logic
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-      <div id="experience" className="flex flex-col items-center">
-        
-        <SectionHeader key="experience" title="Work Experience" subtitle="My journey so far" />
-        
-        <div className="flex flex-row">
-          <div ref={ref}>
-            <motion.div className='w-100' initial={{ opacity: 0, x: -50, y: 0 }}
-                                        animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
-                                        transition={{ delay: 0.3, duration: 1, ease: 'easeInOut' }}>
-              {experiences.map((experience) => (
-                    <ExperienceIntro key={experience.id} {...experience} setSelectedExperience={setSelectedExperience}/>
-                ))}</motion.div>
-          </div>
-          <div className="flex flex-col justify-center w-220 ml-10 mt-5" ref={ref}>
-            <motion.div initial={{ opacity: 0, x: 50 }}
-                                        animate={isInView ? { opacity: 1, x: 0 } : {}}
-                                        transition={{delay: 0.3, duration: 1, ease: 'easeInOut' }}>
-              {experiences.map((experience) => (
-                  <ExperienceSummary key={experience.id} {...experience} selectedExperience={selectedExperience} />
-              ))}
-              </motion.div>
-          </div>
+    <div id="experience" className="flex flex-col items-center w-full max-w-5xl mx-auto px-8 md:px-16 pt-24">
+
+      <div className="w-full mb-12 font-mono text-gray-500 text-sm">
+        [work experience]
+      </div>
+
+      <div className="flex flex-col md:flex-row w-full gap-12 md:gap-24 items-start" ref={ref}>
+        {/* Left Column: Organization List */}
+        <div className="w-full md:w-1/3 flex flex-col gap-2">
+          {experiences.map((experience) => (
+            <ExperienceIntro key={experience.id} {...experience} setSelectedExperience={setSelectedExperience} />
+          ))}
+        </div>
+
+        {/* Right Column: Details */}
+        <div className="w-full md:w-2/3 min-h-[400px]">
+          {experiences.map((experience) => (
+            <ExperienceSummary key={experience.id} {...experience} selectedExperience={selectedExperience} />
+          ))}
         </div>
       </div>
+    </div>
   );
 }
 

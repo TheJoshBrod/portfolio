@@ -1,8 +1,6 @@
-import CodeBubble from "../CodeBubble";
-import SectionHeader from '../general/SectionHeader'
 import Education from "./Education";
 import AboutMe from "./AboutMe"
-import { SkillIcon } from "../skilltag";
+import SkillTag, { SkillIcon } from "../skilltag";
 
 export default function AboutMeSection() {
   const languages = [
@@ -17,64 +15,47 @@ export default function AboutMeSection() {
     "VectorRAG", "GraphRAG", "MCP", "AWS", "Docker", "Git"
   ];
 
-
-
   return (
-    <>
-      {/* Title Card */}
-      <div id="aboutme" className="flex flex-col items-center">
-        <SectionHeader key="1" title="About Me" subtitle="A little bit" />
+    <div id="aboutme" className="flex flex-col items-center w-full max-w-5xl mx-auto px-8 md:px-16 pt-24 pb-24">
 
-        {/* Content */}
-        <div className="flex flex-col gap-24 w-full max-w-7xl px-4">
-          <div className="flex flex-col xl:flex-row gap-16 items-stretch">
-            <div className="flex-1 min-w-0">
-              <AboutMe />
+      <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 w-full items-start">
+        {/* Left Col: About & Education */}
+        <div className="flex-1 w-full flex flex-col gap-16">
+          <AboutMe />
+          <Education />
+        </div>
+
+        {/* Right Col: Skills */}
+        <div className="w-full lg:w-1/3 flex flex-col gap-10 mt-8 lg:mt-0">
+          <div>
+            <div className="mb-4 font-mono text-gray-500 text-sm border-b border-gray-800 pb-2">
+              [languages]
             </div>
-            <div className="flex-1 min-w-0">
-              <Education />
+            <div className="flex flex-wrap gap-y-2">
+              {languages.map(l => <SkillIcon key={l} name={l} />)}
             </div>
           </div>
 
-          <div className="flex flex-col items-center w-full">
-            <div className="mb-12 text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 flex justify-center items-center py-5 px-10 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg">
-              Skills
+          <div>
+            <div className="mb-4 font-mono text-gray-500 text-sm border-b border-gray-800 pb-2">
+              [frameworks]
             </div>
+            <div className="flex flex-wrap gap-y-2">
+              {frameworksAndLibraries.map(l => <SkillIcon key={l} name={l} />)}
+            </div>
+          </div>
 
-            <div className="w-full bg-gray-900/60 backdrop-blur-xl border border-white/10 p-10 rounded-3xl shadow-2xl text-gray-200">
-              <div className="grid md:grid-cols-3 gap-12">
-                <div className="flex flex-col gap-6">
-                  <p className="text-xl font-semibold text-blue-200 border-b border-white/10 pb-3 tracking-wide">Languages</p>
-                  <div className="flex flex-row flex-wrap gap-3">
-                    {languages.map((language) => (
-                      <SkillIcon key={language} name={language} />
-                    ))}
-                  </div>
-                </div>
-
-                <div className="flex flex-col gap-6">
-                  <p className="text-xl font-semibold text-purple-200 border-b border-white/10 pb-3 tracking-wide">Frameworks & Libraries</p>
-                  <div className="flex flex-row flex-wrap gap-3">
-                    {frameworksAndLibraries.map((framework) => (
-                      <SkillIcon key={framework} name={framework} />
-                    ))}
-                  </div>
-                </div>
-
-                <div className="flex flex-col gap-6">
-                  <p className="text-xl font-semibold text-orange-200 border-b border-white/10 pb-3 tracking-wide">Technologies</p>
-                  <div className="flex flex-row flex-wrap gap-3">
-                    {technologiesAndTools.map((tech) => (
-                      <SkillIcon key={tech} name={tech} />
-                    ))}
-                  </div>
-                </div>
-              </div>
+          <div>
+            <div className="mb-4 font-mono text-gray-500 text-sm border-b border-gray-800 pb-2">
+              [technologies]
+            </div>
+            <div className="flex flex-wrap gap-y-2">
+              {technologiesAndTools.map(l => <SkillIcon key={l} name={l} />)}
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "organization": "Jaseci (University of Michigan)",
+        "role":         "Researcher",
+        "logo":         "michigan.ico",
+        "timespan":     "May-Aug 2024",
+        "skills":         ["RAG", "Python", "Langchain", "OpenAI"],
+        "about":        "I was a swe embedded engineer radadadadada"
+    },
+        {
+        "id": 1,
+        "organization": "Jaseci (University of Michigan)",
+        "role":         "Researcher",
+        "logo":         "michigan.ico",
+        "timespan":     "May-Aug 2024",
+        "skills":         ["RAG", "Python", "Langchain", "OpenAI"],
+        "about":        "I was a swe embedded engineer radadadadada"
+    }
+]

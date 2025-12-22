@@ -8,79 +8,39 @@
 
 
 @media (prefers-color-scheme: dark) {
-  :root {
-  --background: #447a9c;
-  --foreground: #ededed;
-  
+    :root {
+        --background: #447a9c;
+        --foreground: #ededed;
 
-  }
-} 
+
+    }
+}
 
 body {
-  /* background: var(--background); */
-  /* color: var(--foreground); */
-  /* font-family: Arial, Helvetica, sans-serif; */
-  /* background-image: radial-gradient(circle, #a3a7c7 1px, #7d7fa6 1px); */
-  /* background-image: radial-gradient(circle, #a3a7c7 1, #111829 0px); */
-  background-color: #111829;
-  background-image: 
-  linear-gradient(to right, #2e2c4f 1px, transparent 1px),
-  linear-gradient(to bottom, #2e2c4f 1px, transparent 1px);
-  background-size: 100px 60px;
-  background-color: #111829;
-}
-html {
-  scroll-behavior: smooth;
+    background-color: #111;
+    color: #eee;
+    font-family: 'Courier Prime', 'Courier New', monospace;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
 }
 
 ::selection {
-  background-color: #37365e38;
-  color: #2e2d4f;
+    background-color: #eee;
+    color: #111;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .social_media {
-    width: 60px;
-    height: 60px;
-    padding: 10px;
-    border-radius: 100px;
-    background-color: #6c66b6;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    filter: drop-shadow(var(--drop-shadow-md));
-    transition: filter 0.2s ease;
-  }
-
-.social_media:hover {
-  background-color: #37345d;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.social_media img {
-    width: 100%;
-    height: 100%;
-    filter: brightness(0) saturate(100%);
-    transition: filter 0.15s ease-in;
-}
-
-.social_media:hover img {
-    filter: none;
-}
-
-.navbar-section:hover{
-  color: #c5bfff;
-}
-
-@keyframes gradient-x {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-
-body{
-  font-optical-sizing: auto;
-  /* font-family: "Noto Sans JP", sans-serif; */
-  font-weight: 100;
-  font-style: normal;
+    /* ... existing styles if needed, or remove later ... */
 }
 
 /* After */
@@ -95,7 +55,8 @@ body{
 
     .timeline-container {
         position: relative;
-        margin-bottom: 2.5rem;;
+        margin-bottom: 2.5rem;
+        ;
 
         .timeline-icon {
             position: absolute;
@@ -122,22 +83,25 @@ body{
             }
         }
 
-.timeline-item {
-    position: relative; /* Creates a stacking context */
-    z-index: 0;
-}
+        .timeline-item {
+            position: relative;
+            /* Creates a stacking context */
+            z-index: 0;
+        }
 
-.timeline-body {
-    position: relative; /* Relative to .timeline-item */
-    background: #c4c1ff;
-    border-radius: 3px;
-    padding: 20px 20px 15px;
-    box-shadow: 1px 3px 9px rgba(0, 0, 0, 0.1);
-    width: 600px;
-    z-index: 2;
-    margin-bottom: 30px;
-}
-/* 
+        .timeline-body {
+            position: relative;
+            /* Relative to .timeline-item */
+            background: #c4c1ff;
+            border-radius: 3px;
+            padding: 20px 20px 15px;
+            box-shadow: 1px 3px 9px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            z-index: 2;
+            margin-bottom: 30px;
+        }
+
+        /* 
 .timeline-body::before {
     content: '';
     position: absolute;
@@ -154,6 +118,7 @@ body{
 
         /* // Primary Timeline */
         &.primary {
+
             .badge,
             .timeline-icon {
                 background: #ffcb05 !important;
@@ -162,6 +127,7 @@ body{
 
         /* // Info Timeline */
         &.info {
+
             .badge,
             .timeline-icon {
                 background: #ffcb05 !important;
@@ -170,6 +136,7 @@ body{
 
         /* // Success Timeline */
         &.success {
+
             .badge,
             .timeline-icon {
                 background: #00bf9a !important;
@@ -178,6 +145,7 @@ body{
 
         /* // Warning Timeline */
         &.warning {
+
             .badge,
             .timeline-icon {
                 background: #ff8d72 !important;
@@ -186,6 +154,7 @@ body{
 
         /* // Dnager Timeline */
         &.danger {
+
             .badge,
             .timeline-icon {
                 background: #ffcb05 !important;
