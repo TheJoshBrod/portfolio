@@ -11,7 +11,7 @@ export default function Education() {
                     <div className="absolute -left-[31px] top-1.5 w-2.5 h-2.5 bg-gray-600 rounded-full border-2 border-[#111]"></div>
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
                         <h3 className="text-white font-mono font-bold text-lg">MSE Computer Science</h3>
-                        <span className="text-gray-500 text-sm font-mono">Present</span>
+                        <span className="text-gray-500 text-sm font-mono">Expected May 2026</span>
                     </div>
 
                     <div className="text-gray-400 font-mono text-sm mb-2">
