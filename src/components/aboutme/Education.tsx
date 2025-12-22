@@ -15,12 +15,12 @@ export default function Education() {
                     </div>
 
                     <div className="text-gray-400 font-mono text-sm mb-2">
-                        University of Michigan <span className="text-gray-600">/</span> GPA: 3.61
+                        University of Michigan <span className="text-gray-600">/</span> GPA: 3.77
                     </div>
 
                     <div className="text-xs text-gray-500 font-mono leading-relaxed mt-2">
                         <span className="text-gray-600 mr-2">Coursework:</span>
-                        Accelerating AI, Advanced Compilers, Parallel Computing
+                        Accelerating AI, Human AI Interaction, Adv. Scalable Systems, OpenSource Innovation, Adv. Compilers, Parallel Computing
                     </div>
                 </div>
 
@@ -33,7 +33,7 @@ export default function Education() {
                     </div>
 
                     <div className="text-gray-400 font-mono text-sm mb-2">
-                        University of Michigan <span className="text-gray-600">/</span> GPA: 3.66
+                        University of Michigan <span className="text-gray-600">/</span> GPA: 3.67
                     </div>
 
                     <div className="text-xs text-gray-500 font-mono leading-relaxed mt-2 max-w-xl">
