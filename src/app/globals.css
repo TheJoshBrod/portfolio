@@ -91,26 +91,8 @@ body{
 
 /* // timeline style */
 .timeline {
-    position: relative;
-    padding-left: 4rem;
-    margin: 0 0 0 30px;
-    color: black;
 
-    &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 4px;
-        height: 100%;
-        background: #27293d;
-    }
-    p {
-    font-weight: 300;
-    line-height: 1.5;
-    font-size: 14px;
-    opacity: .8;
-    }
+
     .timeline-container {
         position: relative;
         margin-bottom: 2.5rem;;
@@ -182,7 +164,7 @@ body{
         &.info {
             .badge,
             .timeline-icon {
-                background: #00284c !important;
+                background: #ffcb05 !important;
             }
         }
 
@@ -206,7 +188,7 @@ body{
         &.danger {
             .badge,
             .timeline-icon {
-                background: #00284c !important;
+                background: #ffcb05 !important;
             }
         }
 

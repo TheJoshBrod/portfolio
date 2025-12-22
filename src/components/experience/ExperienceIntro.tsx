@@ -14,43 +14,28 @@ interface ExperienceIntroProps {
 
 export default function ExperienceIntro(props: ExperienceIntroProps) {
 
-    // Parent Div style
-    const baseClasses  = "bg-[#c4c1ff] border-2 cursor-pointer flex flex-col justify-center rounded-lg duration-50 ease-in-out";
-    const hoverClasses = "hover:drop-shadow-2xl hover:w-105 hover:bg-[#555392] hover:text-[#c4c1ff]";
-    const sizeClass    = "w-100 h-20 pl-4 mt-5";
-  
-    const[hovered, setHovered] = useState(false);
-
-    // Text Hover Style
-    const position_color = "text-gray-800"
-    const company_name_color = "text-gray-600";
-    const hover_color = "text-[#c4c1ff]";
-
     return (
-      <>
-             <div 
-                onClick={() => {props.setSelectedExperience(props.id);}}
-                onMouseEnter={() => setHovered(true)}
-                onMouseLeave={() => setHovered(false)}
-                className={`${baseClasses} ${sizeClass} ${hoverClasses}`}
-            >
-                
-                {/* Role */}
-                <div className="flex items-center">
-                    <h2 className={`text-lg font-bold ${hovered ? hover_color : position_color}`}>
+        <div
+            onClick={() => { props.setSelectedExperience(props.id); }}
+            className={`group relative text-left p-4 mt-4 w-full cursor-pointer rounded-xl border border-white/5 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:shadow-lg hover:scale-[1.02]`}
+        >
+            <div className="flex items-center justify-between">
+                <div className="flex flex-col">
+                    <h2 className="text-lg font-bold text-gray-200 group-hover:text-white transition-colors">
                         {props.role}
                     </h2>
-                    <img src={props.logo} className="h-5 rounded-sm p-0.5 ml-1"/>
+                    <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                        {props.organization} | {props.timespan}
+                    </p>
                 </div>
-                
-                {/* Company Name/ Timespan */}
-                <p className={`text-sm ${hovered ? hover_color : company_name_color}`}>
-                    {props.organization} | {props.timespan}
-                </p>
-
+                {props.logo && (
+                    <div className="bg-white/90 p-1 rounded-md">
+                        <img src={props.logo} className="h-6 w-auto object-contain" alt={`${props.organization} logo`} />
+                    </div>
+                )}
             </div>
-      </>
-  );
+        </div>
+    );
 }
 
 
