@@ -353,7 +353,7 @@ o     . * +                              .o       .                           ..
       <div className="max-w-5xl mx-auto p-8 md:p-16 flex flex-col relative z-10 h-full">
         <div className="flex flex-row justify-center ">
           <nav className="flex gap-6 text-sm mb-24 text-gray-500 font-mono">
-            {['home', 'experience', 'portfolio', 'about', 'contact'].map((item) => (
+            {['about', 'experience', 'portfolio', 'contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item == 'about' ? 'aboutme' : item}`}
@@ -392,7 +392,7 @@ o     . * +                              .o       .                           ..
             </div>
           </div>
         </div>
-        
+
       </div>
     </div>
     <div className="absolute left-0 w-full overflow-hidden text-gray-600 font-mono text-xl select-none opacity-80 whitespace-nowrap z-20 text-center">
