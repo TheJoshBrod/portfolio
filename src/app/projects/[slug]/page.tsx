@@ -53,16 +53,16 @@ export default async function ProjectDetailPage({ params }: PageProps) {
           <div className="leading-relaxed space-y-4" dangerouslySetInnerHTML={{ __html: project.content }} />
         </article>
 
-        {(project.github || project.demo) && (
+        {(project.github || project.paper) && (
           <div className="flex flex-wrap gap-6 mb-16">
             {project.github && (
               <a href={project.github} target="_blank" rel="noopener noreferrer" className="font-mono text-sm text-gray-500 hover:text-white border-b border-gray-800 hover:border-white pb-1 transition-all">
                 [view source]
               </a>
             )}
-            {project.demo && (
-              <a href={project.demo} target="_blank" rel="noopener noreferrer" className="font-mono text-sm text-gray-500 hover:text-white border-b border-gray-800 hover:border-white pb-1 transition-all">
-                [view demo]
+            {project.paper && (
+              <a href={project.paper} target="_blank" rel="noopener noreferrer" className="font-mono text-sm text-gray-500 hover:text-white border-b border-gray-800 hover:border-white pb-1 transition-all">
+                [view paper]
               </a>
             )}
           </div>

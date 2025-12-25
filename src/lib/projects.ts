@@ -12,7 +12,7 @@ export interface ProjectMetadata {
   description?: string;
   technologies: string[];
   github?: string;
-  demo?: string;
+  paper?: string;
 }
 
 export interface Project extends ProjectMetadata {
