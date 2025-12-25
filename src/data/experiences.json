@@ -2,72 +2,74 @@
     {
         "id": 5,
         "organization": "Jaseci Labs (University of Michigan)",
-        "role":         "AI Engineer & Jac Dev Advocate",
-        "timespan":     "Oct 2025 - Present",
-        "skills":       ["RAG", "Python", "Jac-lang", "JavaScript"],
-        "highlights":   [
-                            "Developed an Agentic-AI Email Assistant using Jac’s byLLM capabilities to enforce type-safe schema adherence in LLM outputs, replacing manual prompt engineering with semantic code definitions to ensure type safe output",
-                            "Accelerated open-source adoption of Jac language by engineering client-facing applications and comprehensive technical documentation, lowering the barrier to entry for building novel agentic-first, graph-based systems"
-                        ]
+        "role": "AI Engineer & Jac Dev Advocate",
+        "timespan": "Oct 2025 - Present",
+        "skills": [
+            "RAG",
+            "Python",
+            "Jac-lang",
+            "JavaScript"
+        ],
+        "highlights": [
+            "Developed an Agentic-AI Email Assistant using Jac’s byLLM capabilities to enforce type-safe schema adherence in LLM outputs, replacing manual prompt engineering with semantic code definitions to ensure type safe output",
+            "Accelerated open-source adoption of Jac language by engineering client-facing applications and comprehensive technical documentation, lowering the barrier to entry for building novel agentic-first, graph-based systems"
+        ]
     },
     {
         "id": 4,
         "organization": "North Atlantic Industries",
-        "role":         "AI SWE Intern",
-        "timespan":     "May 2025 - Aug 2025",
-        "skills":       ["RAG", "MCP", "AI-Agents", "AWS", "PostgreSQL", "Python", "Docker", "Jenkins"],
-        "highlights":   [
-                            "Architected multi-agent chat system with Model Context Protocol (MCP) infrastructure to streamline information retrieval across 5,000+ product documents, achieving 95% code accuracy and 85% user preference over previous solution.",
-                            "Automated end-to-end ingestion pipelines for structured and unstructured data using AWS RDS and Neptune graph databases, enabling intelligent retrieval through dynamic model selection and graph traversal.",
-                            "Established CI/CD pipeline with Docker, Jenkins, LlamaIndex, and PostgreSQL to maintain real-time data currency and validated system performance through automated code generation, compilation, and testing.",
-                            "Developed automated assessment framework to evaluate system performance through end-to-end code generation, compilation, and runtime verification pipeline, focusing on correct usage of custom C API library to interface directly with proprietary hardware products."
-                        ]
+        "role": "AI SWE Intern",
+        "timespan": "May 2025 - Aug 2025",
+        "skills": [
+            "RAG",
+            "MCP",
+            "AI-Agents",
+            "AWS",
+            "PostgreSQL",
+            "Python",
+            "Docker",
+            "Jenkins"
+        ],
+        "highlights": [
+            "Architected multi-agent chat system with Model Context Protocol (MCP) infrastructure to streamline information retrieval across 5,000+ product documents, achieving 95% code accuracy and 85% user preference over previous solution.",
+            "Automated end-to-end ingestion pipelines for structured and unstructured data using AWS RDS and Neptune graph databases, enabling intelligent retrieval through dynamic model selection and graph traversal.",
+            "Established CI/CD pipeline with Docker, Jenkins, LlamaIndex, and PostgreSQL to maintain real-time data currency and validated system performance through automated code generation, compilation, and testing.",
+            "Developed automated assessment framework to evaluate system performance through end-to-end code generation, compilation, and runtime verification pipeline, focusing on correct usage of custom C API library to interface directly with proprietary hardware products."
+        ]
     },
     {
         "id": 3,
         "organization": "Jaseci Labs (University of Michigan)",
-        "role":         "Researcher",
-        "timespan":     "Oct 2024 - Present",
-        "skills":       ["PyTorch", "CUDA", "C++", "RAG", "Python"],
-        "highlights":   [
-                            "Addressed the limitations of proprietary NVIDIA libraries by architecting a model-agnostic LLM pipeline, successfully synthesizing custom open-source CUDA kernels for high-performance computing",
-                            "Achieved runtime performance within 20% of hand-optimized PyTorch kernels by engineering a recursive optimization loop that iteratively refines generated kernels to minimize inference latency and GPU memory overhead"
-                        ]
+        "role": "AI Researcher",
+        "timespan": "Oct 2024 - Present",
+        "skills": [
+            "PyTorch",
+            "CUDA",
+            "C++",
+            "RAG",
+            "Python"
+        ],
+        "highlights": [
+            "Addressed the limitations of proprietary NVIDIA libraries by architecting a model-agnostic LLM pipeline, successfully synthesizing custom open-source CUDA kernels for high-performance computing",
+            "Achieved runtime performance within 20% of hand-optimized PyTorch kernels by engineering a recursive optimization loop that iteratively refines generated kernels to minimize inference latency and GPU memory overhead"
+        ]
     },
     {
         "id": 2,
         "organization": "North Atlantic Industries",
-        "role":         "Embedded SWE Intern",
-        "timespan":     "May 2024 - Aug 2024",
-        "skills":       ["Qt", "C#", "C", "React", "WinForms"],
-        "highlights":   [
-                            "Developed an API and GUI for a programmable relay-controlled resistor card to decrease time required for quality assurance testing by 66% through improving testing algorithm",
-                            "Created demo embedded applications and documentation for customers learning to perform backplane resets, handle system level interrupts, and program simulations of synchro angles through low-level registers calls", 
-                            "Implemented method for users to easily retrieve pin mappings using React to simplify hardware configuration processes of trillions of combinations of motherboard-modules"
-                        ]
-    },
-    {
-        "id": 1,
-        "organization": "Spark Electric Racing",
-        "role":         "Software Director",
-        "timespan":     "Aug 2022 - Dec 2025",
-        "skills":       ["Qt", "Python", "Pandas", "Plotly"],    
-        "highlights":   [
-                            "Founded Spark’s Data Analytics Team, leading 10+ young professionals to optimize motor performance through data-driven insights, enabling a 30% RPM increase",
-                            "Structured codebase to interpret and store CAN messages in a SQL database, visualize diagnostic data creating Plotly graphs and a Dash GUI, and deliver live telemetry insights to facilitate troubleshooting",
-                            "Managed projects utilizing tools such as Git, Agile, Jira, and GitHub Issues to maintain pace, structure multiple tasks, and promote communication between other disciplines"
-                        ]
-    },
-    {
-        "id": 0,
-        "organization": "Michigan Hackers",
-        "role":         "Open Source Lead",
-        "timespan":     "Aug 2024 - May 2025",
-        "skills":       ["NextJS", "TypeScript", "PostgreSQL", "Socket.io", "Tailwind"],
-        "highlights":   [
-                            "Established an open-source project using the Spotify API to allow non-Spotify users to send song requests to another Spotify user's music queue",
-                            "Engineered a fault-tolerant, real-time distributed system to sync client states, while implementing PostgreSQL relational schema to model dynamic queues, ensuring a \"single source of truth\" and scalable full-stack architecture",
-                            "Organized team of 8+ young professionals, teaching about open-source practices on GitHub utilizing forking, issues, and pull requests to allow a wider community to contribute, review, and finetune collaborative project codebases"
-                        ]
+        "role": "Embedded SWE Intern",
+        "timespan": "May 2024 - Aug 2024",
+        "skills": [
+            "Qt",
+            "C#",
+            "C",
+            "React",
+            "WinForms"
+        ],
+        "highlights": [
+            "Developed an API and GUI for a programmable relay-controlled resistor card to decrease time required for quality assurance testing by 66% through improving testing algorithm",
+            "Created demo embedded applications and documentation for customers learning to perform backplane resets, handle system level interrupts, and program simulations of synchro angles through low-level registers calls",
+            "Implemented method for users to easily retrieve pin mappings using React to simplify hardware configuration processes of trillions of combinations of motherboard-modules"
+        ]
     }
 ]
