@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import StarsBackground from '../StarsBackground';
 
 export default function Header() {
 
@@ -339,15 +340,7 @@ o     . * +                              .o       .                           ..
     <div className="min-h-screen w-full relative overflow-hidden bg-[#111]">
 
       {/* Starry Night Background: Tiled and Low Opacity */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none opacity-[0.3] flex items-center justify-center">
-        <div className="flex flex-wrap w-[200vw] -ml-[50vw] -mr-[50vw] justify-center gap-0">
-          {Array(30).fill([asciiArt1, asciiArt2, asciiArt3, asciiArt4]).flat().map((art, i) => (
-            <pre key={i} className="text-[6px] md:text-[8px] leading-[1.0] text-gray-500 font-mono whitespace-pre text-center">
-              {art}
-            </pre>
-          ))}
-        </div>
-      </div>
+      <StarsBackground />
 
       {/* Simple Text Navbar */}
       <div className="max-w-5xl mx-auto p-8 md:p-16 flex flex-col relative z-10 h-full">

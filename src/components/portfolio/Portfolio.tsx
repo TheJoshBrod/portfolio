@@ -9,14 +9,14 @@ const projects = [
     year: '2025',
     title: 'CGinS: LLM CUDA Compiler',
     summary: 'Agentic Iterative Kernel Refinement',
-    url: '#'
+    url: '/projects/CUDA-Ghost-in-the-Shell'
   },
   {
     id: 2,
     year: '2025',
     title: 'Triton -> WGSL: Transpiler',
     summary: 'High-performance WebGPU',
-    url: '#'
+    url: '/projects/WGSL-Transpiler'
   },
   {
     id: 3,
@@ -54,7 +54,7 @@ export default function Portfolio() {
       </div>
 
       <div className="mt-12 text-center md:text-left">
-        <a href="#" className="font-mono text-xs text-gray-500 hover:text-white border-b border-gray-800 hover:border-white pb-1 transition-all">
+        <a href="/projects" className="font-mono text-xs text-gray-500 hover:text-white border-b border-gray-800 hover:border-white pb-1 transition-all">
           [view all projects]
         </a>
       </div>
