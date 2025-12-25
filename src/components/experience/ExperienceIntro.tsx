@@ -4,9 +4,7 @@ interface ExperienceIntroProps {
     id: number;
     organization: string;
     role: string;
-    logo: string;
     timespan: string;
-    about: string;
     skills?: string[];
     highlights?: string[];
     setSelectedExperience: React.Dispatch<React.SetStateAction<number>>;

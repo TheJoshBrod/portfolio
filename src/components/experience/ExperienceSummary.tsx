@@ -6,9 +6,7 @@ interface ExperienceSummaryProps {
   id: number;
   organization: string;
   role: string;
-  logo: string;
   timespan: string;
-  about: string;
   skills?: string[];
   highlights?: string[];
   selectedExperience: number;

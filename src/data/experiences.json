@@ -1,22 +1,6 @@
 [
     {
-        "id": 5,
-        "organization": "Jaseci Labs (University of Michigan)",
-        "role": "AI Engineer & Jac Dev Advocate",
-        "timespan": "Oct 2025 - Present",
-        "skills": [
-            "RAG",
-            "Python",
-            "Jac-lang",
-            "JavaScript"
-        ],
-        "highlights": [
-            "Developed an Agentic-AI Email Assistant using Jac’s byLLM capabilities to enforce type-safe schema adherence in LLM outputs, replacing manual prompt engineering with semantic code definitions to ensure type safe output",
-            "Accelerated open-source adoption of Jac language by engineering client-facing applications and comprehensive technical documentation, lowering the barrier to entry for building novel agentic-first, graph-based systems"
-        ]
-    },
-    {
-        "id": 4,
+        "id": 3,
         "organization": "North Atlantic Industries",
         "role": "AI SWE Intern",
         "timespan": "May 2025 - Aug 2025",
@@ -38,7 +22,7 @@
         ]
     },
     {
-        "id": 3,
+        "id": 2,
         "organization": "Jaseci Labs (University of Michigan)",
         "role": "AI Researcher",
         "timespan": "Oct 2024 - Present",
@@ -55,7 +39,23 @@
         ]
     },
     {
-        "id": 2,
+        "id": 1,
+        "organization": "Jaseci Labs (University of Michigan)",
+        "role": "AI Engineer & Jac Dev Advocate",
+        "timespan": "Oct 2025 - Present",
+        "skills": [
+            "RAG",
+            "Python",
+            "Jac-lang",
+            "JavaScript"
+        ],
+        "highlights": [
+            "Developed an Agentic-AI Email Assistant using Jac’s byLLM capabilities to enforce type-safe schema adherence in LLM outputs, replacing manual prompt engineering with semantic code definitions to ensure type safe output",
+            "Accelerated open-source adoption of Jac language by engineering client-facing applications and comprehensive technical documentation, lowering the barrier to entry for building novel agentic-first, graph-based systems"
+        ]
+    },
+    {
+        "id": 0,
         "organization": "North Atlantic Industries",
         "role": "Embedded SWE Intern",
         "timespan": "May 2024 - Aug 2024",
