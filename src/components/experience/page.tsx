@@ -1,17 +1,12 @@
 import { useState, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
 import experiences from '../../data/experiences.json';
 import ExperienceIntro from './ExperienceIntro';
 import ExperienceSummary from './ExperienceSummary';
-import SectionHeader from '../general/SectionHeader'
 
 export default function ExperienceSection() {
 
-  const [selectedExperience, setSelectedExperience] = useState(1)
+  const [selectedExperience, setSelectedExperience] = useState(experiences.length-1);
   const ref = useRef(null);
-
-  // Adjusted margin for earlier triggering or just remove frame motion if desired, keeping simple fade logic
-  const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
     <div id="experience" className="flex flex-col items-center w-full max-w-5xl mx-auto px-8 md:px-16 pt-24">

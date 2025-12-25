@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 
 // Updated data layout for list view
@@ -8,22 +7,22 @@ const projects = [
   {
     id: 1,
     year: '2025',
-    title: 'Project Alpha',
-    role: 'Full Stack',
+    title: 'CGinS: LLM CUDA Compiler',
+    summary: 'Agentic Iterative Kernel Refinement',
     url: '#'
   },
   {
     id: 2,
-    year: '2024',
-    title: 'Project Beta',
-    role: 'Backend Eng',
+    year: '2025',
+    title: 'Triton -> WGSL: Transpiler',
+    summary: 'High-performance WebGPU',
     url: '#'
   },
   {
     id: 3,
-    year: '2024',
-    title: 'Project Gamma',
-    role: 'Design Lead',
+    year: '2025',
+    title: 'Spark Electric Racing: Live Telemetry',
+    summary: 'Remote Motorcycle Diagnostics',
     url: '#'
   }
 ];
@@ -48,7 +47,7 @@ export default function Portfolio() {
             </div>
 
             <span className="text-sm text-gray-500 group-hover:text-gray-400 transition-colors mt-2 md:mt-0 font-mono">
-              {project.role}
+              {project.summary}
             </span>
           </Link>
         ))}
