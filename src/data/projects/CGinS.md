@@ -74,7 +74,7 @@ CUDA Ghost in the Shell (CGinS) is an automated system for generating and valida
 
 <div class="pipeline-step">
   <h3>Hardware-Aware Optimization</h3>
-  <p>Once validated for correctness, kernels undergo a single-shot optimization pass targeting specific architectural constraints of the NVIDIA RTX 3090. The LLM is provided with hardware metadata—such as SM count, shared memory limits, and warp width—to produce a variant optimized for throughput and memory efficiency. This stage is intentionally non-iterative to isolate the impact of hardware-aware prompting from other tuning heuristics.</p>
+  <p>Once validated for correctness, kernels undergo a single-shot optimization pass targeting specific architectural constraints of the NVIDIA RTX 3090. The LLM is provided with hardware metadata (SM count, shared memory limits, and warp width) to produce a variant optimized for throughput and memory efficiency. This stage is intentionally non-iterative to isolate the impact of hardware-aware prompting from other tuning heuristics.</p>
 </div>
 
 ## Results

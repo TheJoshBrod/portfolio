@@ -28,18 +28,21 @@ export default function ProjectsPage() {
                             <Link href={`/projects/${project.slug}`} className="absolute inset-0 z-0" aria-label={`View ${project.title}`} />
 
                             <div className="relative z-10 flex flex-col h-full pointer-events-none">
-                                <div className="flex justify-between items-start mb-6">
-                                    <h2 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors tracking-tight">
+                                <div className="mb-6">
+                                    <h2 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors tracking-tight leading-tight">
                                         {project.title}
                                     </h2>
-                                    <span className="text-[10px] text-gray-500 font-mono border border-gray-800 px-2 py-0.5 rounded-sm uppercase tracking-widest whitespace-nowrap">
+                                </div>
+
+                                <p className="text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed flex-grow">
+                                    {project.description || project.content.replace(/<[^>]*>/g, '').substring(0, 150) + '...'}
+                                </p>
+
+                                <div className="mb-4">
+                                    <span className="inline-block text-[10px] font-mono text-blue-400 border border-blue-500/30 bg-blue-500/5 px-2.5 py-1 rounded-sm uppercase tracking-[0.15em] whitespace-nowrap shadow-[0_0_15px_rgba(59,130,246,0.05)]">
                                         {project.date}
                                     </span>
                                 </div>
-
-                                <p className="text-gray-400 text-sm mb-4 line-clamp-3 leading-relaxed flex-grow">
-                                    {project.description || project.content.replace(/<[^>]*>/g, '').substring(0, 150) + '...'}
-                                </p>
 
                                 <div className="flex flex-wrap gap-2 mb-8">
                                     {project.technologies.slice(0, 5).map((tech) => (

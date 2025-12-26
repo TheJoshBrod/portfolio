@@ -8,10 +8,10 @@ export default function ContactSection() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('loading');
-    
+
     const form = e.currentTarget;
     const formData = new FormData(form);
-    
+
     try {
       const response = await fetch('https://formspree.io/f/mvzpjlpp', {
         method: 'POST',
@@ -20,7 +20,7 @@ export default function ContactSection() {
           'Accept': 'application/json'
         }
       });
-      
+
       if (response.ok) {
         setStatus('success');
         form.reset();
@@ -29,7 +29,7 @@ export default function ContactSection() {
       } else {
         setStatus('error');
       }
-    } catch (error) {
+    } catch {
       setStatus('error');
     }
   };
@@ -79,8 +79,8 @@ export default function ContactSection() {
             />
           </div>
 
-          <button 
-            type="submit" 
+          <button
+            type="submit"
             disabled={status === 'loading'}
             className="self-start text-gray-500 hover:text-white border border-gray-800 hover:border-white px-4 py-2 rounded-sm transition-all mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
           >

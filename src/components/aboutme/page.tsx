@@ -1,6 +1,6 @@
 import Education from "./Education";
 import AboutMe from "./AboutMe"
-import SkillTag, { SkillIcon } from "../skilltag";
+import { SkillIcon } from "../skilltag";
 
 export default function AboutMeSection() {
   const languages = [

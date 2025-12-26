@@ -54,9 +54,9 @@ export default function Portfolio() {
       </div>
 
       <div className="mt-12 text-center md:text-left">
-        <a href="/projects" className="font-mono text-xs text-gray-500 hover:text-white border-b border-gray-800 hover:border-white pb-1 transition-all">
+        <Link href="/projects" className="font-mono text-xs text-gray-500 hover:text-white border-b border-gray-800 hover:border-white pb-1 transition-all">
           [view all projects]
-        </a>
+        </Link>
       </div>
     </div>
   );
