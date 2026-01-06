@@ -5,7 +5,7 @@ import ExperienceSummary from './ExperienceSummary';
 
 export default function ExperienceSection() {
 
-  const [selectedExperience, setSelectedExperience] = useState(experiences.length-1);
+  const [selectedExperience, setSelectedExperience] = useState(experiences.length - 1);
   const ref = useRef(null);
 
   return (
@@ -17,7 +17,7 @@ export default function ExperienceSection() {
 
       <div className="flex flex-col md:flex-row w-full gap-12 md:gap-24 items-start" ref={ref}>
         {/* Left Column: Organization List */}
-        <div className="w-full md:w-1/3 flex flex-col gap-2">
+        <div className="w-full md:w-1/3 flex-col mt-10 gap-2 hidden md:flex">
           {experiences.map((experience) => (
             <ExperienceIntro key={experience.id} {...experience} setSelectedExperience={setSelectedExperience} />
           ))}
@@ -25,9 +25,19 @@ export default function ExperienceSection() {
 
         {/* Right Column: Details */}
         <div className="w-full md:w-2/3 min-h-[400px]">
-          {experiences.map((experience) => (
-            <ExperienceSummary key={experience.id} {...experience} selectedExperience={selectedExperience} />
-          ))}
+          {/* Desktop View */}
+          <div className="hidden md:block">
+            {experiences.map((experience) => (
+              <ExperienceSummary key={experience.id} {...experience} selectedExperience={selectedExperience} />
+            ))}
+          </div>
+
+          {/* Mobile View - Show All */}
+          <div className="flex flex-col gap-12 md:hidden">
+            {experiences.map((experience) => (
+              <ExperienceSummary key={experience.id} {...experience} selectedExperience={experience.id} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
