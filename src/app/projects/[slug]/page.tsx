@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { getAllProjects, getProjectBySlug } from '@/lib/projects';
 import StarsBackground from '@/components/StarsBackground';
 import { Github, FileText, ArrowLeft, Home, Calendar } from 'lucide-react';
+import Footnote from '@/components/footnote/page';
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -64,31 +65,31 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                                 </div>
                             </div>
                             {(project.github || project.paper) && (
-                              <div className="flex flex-wrap gap-4">
-                                {project.github && (
-                                    <a
-                                        href={project.github}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center gap-3 px-6 py-3 border border-primary bg-primary text-[#111] hover:bg-transparent hover:text-primary hover:shadow-inner rounded-sm transition-all duration-300 text-xs font-bold uppercase tracking-widest group"
-                                    >
-                                        <Github size={18} className="transition-transform duration-300 group-hover:scale-110" />
-                                        <span>view source code</span>
-                                    </a>
-                                )}
-                                
-                                {project.paper && (
-                                    <a
-                                        href={project.paper}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center gap-3 px-6 py-3 border border-gray-700 bg-gray-800/30 text-gray-300 hover:border-primary hover:text-primary hover:bg-gray-800/60 rounded-sm transition-all duration-300 text-xs font-bold uppercase tracking-widest group"
-                                    >
-                                        <FileText size={18} className="transition-transform duration-300 group-hover:scale-110" />
-                                        <span>read paper</span>
-                                    </a>
-                                )}
-                              </div>
+                                <div className="flex flex-wrap gap-4">
+                                    {project.github && (
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-3 px-6 py-3 border border-primary bg-primary text-[#111] hover:bg-transparent hover:text-primary hover:shadow-inner rounded-sm transition-all duration-300 text-xs font-bold uppercase tracking-widest group"
+                                        >
+                                            <Github size={18} className="transition-transform duration-300 group-hover:scale-110" />
+                                            <span>view source code</span>
+                                        </a>
+                                    )}
+
+                                    {project.paper && (
+                                        <a
+                                            href={project.paper}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-3 px-6 py-3 border border-gray-700 bg-gray-800/30 text-gray-300 hover:border-primary hover:text-primary hover:bg-gray-800/60 rounded-sm transition-all duration-300 text-xs font-bold uppercase tracking-widest group"
+                                        >
+                                            <FileText size={18} className="transition-transform duration-300 group-hover:scale-110" />
+                                            <span>read paper</span>
+                                        </a>
+                                    )}
+                                </div>
                             )}
                         </div>
                     </div>
@@ -99,26 +100,8 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                         <div className="space-y-16" dangerouslySetInnerHTML={{ __html: project.content }} />
                     </article>
                 </main>
-
-                <footer className="mt-32 pt-12 border-t border-gray-800 text-[10px] text-gray-600 font-mono uppercase tracking-[0.2em] flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div className="text-center md:text-left">
-                        Built with Next.js & Tailwind.
-                        <br />
-                        ASCII art via{" "}
-                        <a
-                            href="https://www.asciiart.eu/ascii-night-sky-generator"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline hover:text-gray-400 transition-colors"
-                        >
-                            asciiart.eu
-                        </a>.
-                    </div>
-                    <div>
-                        &copy; {new Date().getFullYear()} Josh Brodsky. All Rights Reserved.
-                    </div>
-                </footer>
             </div>
+            <Footnote />
         </div>
     );
 }

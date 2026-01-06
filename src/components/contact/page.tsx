@@ -99,23 +99,6 @@ export default function ContactSection() {
           )}
         </form>
       </div>
-
-      <div className="mt-24 text-gray-600 font-mono text-xs">
-        Built with Next.js & Tailwind.
-        <br />
-        ASCII art generated using{" "}
-        <a
-          href="https://www.asciiart.eu/ascii-night-sky-generator"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline hover:text-gray-800"
-        >
-          asciiart.eu
-        </a>.
-        <br />
-        &copy; {new Date().getFullYear()} Josh Brodsky.
-      </div>
-
     </div>
   );
 }
