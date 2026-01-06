@@ -13,7 +13,7 @@ export default function Header() {
       {/* Simple Text Navbar */}
       <div className="max-w-5xl mx-auto p-8 md:p-16 flex flex-col relative z-10 h-full">
         <div className="flex flex-row justify-center ">
-          <nav className="flex gap-6 text-sm mb-24 text-gray-500 font-mono">
+          <nav className="flex gap-4 text-sm mb-24 text-gray-500 font-mono">
             {['about', 'experience', 'portfolio', 'contact'].map((item) => (
               <a
                 key={item}
@@ -35,8 +35,7 @@ export default function Header() {
             </div>
 
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl mx-auto">
-              I build intelligent systems and digital tools. Currently exploring <span className="text-white">Applied AI</span> and <span className="text-white">LLM Applications</span>.
-              I like keeping things simple, functional, and efficient.
+              I scale intelligent <span className="text-white">Agentic Systems</span> from prototype to production-ready applications.
             </p>
 
             <div className="flex justify-center gap-8 text-sm mt-6 text-gray-500 font-mono">

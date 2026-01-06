@@ -3,30 +3,46 @@ import AboutMe from "./AboutMe"
 import { SkillIcon } from "../skilltag";
 
 export default function AboutMeSection() {
+
+  const aiTools = [
+    "PyTorch", "Langchain", "Llamaindex", "Ollama"
+  ];
+
   const languages = [
-    "Python", "TypeScript", "C++", "Java", "C", "JavaScript", "C#", "Bash", "SQL"
+    "Python", "C++", "CUDA", "TypeScript", "C", "Bash", "SQL"
   ];
 
   const frameworksAndLibraries = [
-    "Pandas", "NextJS", "React", "jQuery", "Vue", "Bootstrap", "QT", "Flask",
+    "NextJS/React", "jQuery", "Vue", "Bootstrap", "QT", "Flask",
   ];
 
   const technologiesAndTools = [
-    "VectorRAG", "GraphRAG", "MCP", "AWS", "Docker", "Git"
+    "Jenkins", "AWS", "Docker", "Git", "Regex"
   ];
 
   return (
     <div id="aboutme" className="flex flex-col items-center w-full max-w-5xl mx-auto px-8 md:px-16 pt-24 pb-24">
 
-      <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 w-full items-start">
-        {/* Left Col: About & Education */}
+      <AboutMe />
+
+      <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 w-full items-start mt-16">
+        {/* Left Col: Education */}
         <div className="flex-1 w-full flex flex-col gap-16">
-          <AboutMe />
           <Education />
         </div>
 
         {/* Right Col: Skills */}
         <div className="w-full lg:w-1/3 flex flex-col gap-10 mt-8 lg:mt-0">
+
+          <div>
+            <div className="mb-4 font-mono text-gray-500 text-sm border-b border-gray-800 pb-2">
+              [ai tools]
+            </div>
+            <div className="flex flex-wrap gap-y-2">
+              {aiTools.map(l => <SkillIcon key={l} name={l} />)}
+            </div>
+          </div>
+
           <div>
             <div className="mb-4 font-mono text-gray-500 text-sm border-b border-gray-800 pb-2">
               [languages]
