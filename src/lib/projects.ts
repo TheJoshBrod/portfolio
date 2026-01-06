@@ -25,21 +25,24 @@ export function getAllProjects(): Project[] {
   }
 
   const fileNames = fs.readdirSync(projectsDirectory);
-  
+
   const projects = fileNames
     .filter(fileName => fileName.endsWith('.md'))
     .map(fileName => {
       const fullPath = path.join(projectsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, 'utf8');
       const { data, content } = matter(fileContents);
-      
+
+      const html = marked(content) as string;
+      const fixedHtml = html.replace(/src="\/project\//g, 'src="/portfolio/project/');
+
       return {
         ...(data as ProjectMetadata),
-        content: marked(content) as string,
+        content: fixedHtml,
       };
     })
     .sort((a, b) => (a.date > b.date ? -1 : 1));
-  
+
   return projects;
 }
 
