@@ -11,7 +11,7 @@ export default function AboutMe() {
           My name is <span className="text-white font-bold">Josh</span>. I am a Masters Student and Researcher studying <span className="text-white">Computer Science</span> at the University of Michigan, specializing in AI development with a focus on LLMs applications.
         </p>
         <p>
-          Recent projects I've worked on are an agentic ML optimizer for PyTorch and a Triton-to-WGSL transpiler. 
+          Recent projects I&apos;ve worked on are an agentic ML optimizer for PyTorch and a Triton-to-WGSL transpiler.
         </p>
         <p>
           Regardless of the environment, I enjoy making tools that leave a measurable impact. If you are looking for someone who’s excited to build and innovate with AI systems, feel free to reach out.
