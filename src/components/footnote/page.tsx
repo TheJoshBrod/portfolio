@@ -3,7 +3,7 @@
 export default function Footnote() {
 
     return (
-        <div id="footnote" className="flex flex-col items-start w-full max-w-5xl mx-auto px-8 md:px-16 mb-16">
+        <div id="footnote" className="flex flex-col items-start w-full max-w-5xl mx-auto px-8 md:px-16">
 
             <div className=" text-gray-600 font-mono text-xs">
                 Built with Next.js & Tailwind.

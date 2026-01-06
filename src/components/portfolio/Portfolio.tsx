@@ -29,7 +29,7 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <div id="portfolio" className="max-w-5xl mx-auto p-8 md:p-16 relative z-10">
+    <div id="portfolio" className="max-w-5xl mx-auto px-8 md:px-16 relative z-10">
       <h2 className="text-sm font-mono text-gray-500 mb-8">[selected works]</h2>
 
       <div className="flex flex-col">

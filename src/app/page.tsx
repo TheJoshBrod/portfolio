@@ -9,13 +9,13 @@ import Footnote from "@/components/footnote/page";
 export default function Home() {
 
   return (
-    <>
+    <div className="flex flex-col gap-32 pb-32 bg-[#111]">
       <Header />
       <AboutMeSection />
       <ExperienceSection />
       <Portfolio />
       <Contact />
       <Footnote />
-    </>
+    </div>
   );
 }

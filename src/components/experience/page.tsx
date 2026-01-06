@@ -9,7 +9,7 @@ export default function ExperienceSection() {
   const ref = useRef(null);
 
   return (
-    <div id="experience" className="flex flex-col items-center w-full max-w-5xl mx-auto px-8 md:px-16 pt-24">
+    <div id="experience" className="flex flex-col items-center w-full max-w-5xl mx-auto px-8 md:px-16">
 
       <div className="w-full mb-12 font-mono text-gray-500 text-sm">
         [work experience]

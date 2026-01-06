@@ -21,7 +21,7 @@ export default function AboutMeSection() {
   ];
 
   return (
-    <div id="aboutme" className="flex flex-col items-center w-full max-w-5xl mx-auto px-8 md:px-16 pt-24 pb-24">
+    <div id="aboutme" className="flex flex-col items-center w-full max-w-5xl mx-auto px-8 md:px-16">
 
       <AboutMe />
 
