@@ -418,7 +418,7 @@ o     . * +                              .o       .                           ..
   return (
     <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none opacity-[0.3] flex items-center justify-center">
       <div className="flex flex-wrap w-[200vw] -ml-[50vw] -mr-[50vw] justify-center gap-0">
-        {Array(30).fill([asciiArt5, asciiArt1, asciiArt2, asciiArt3, asciiArt4]).flat().map((art, i) => (
+        {Array(8).fill([asciiArt5, asciiArt1, asciiArt2, asciiArt3, asciiArt4]).flat().map((art, i) => (
           <pre key={i} className="text-[6px] md:text-[8px] leading-[1.0] text-gray-500 font-mono whitespace-pre text-center">
             {art}
           </pre>

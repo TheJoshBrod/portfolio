@@ -2,8 +2,27 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "TheJoshBrod",
-  description: "Portfolio of TheJoshBrod",
+  metadataBase: new URL('https://thejoshbrod.github.io/portfolio'),
+  title: {
+    default: "TheJoshBrod",
+    template: "%s | TheJoshBrod",
+  },
+  description: "Josh Brodsky — CS MSE at University of Michigan. I scale intelligent Agentic Systems from prototype to production-ready applications.",
+  openGraph: {
+    type: "website",
+    siteName: "TheJoshBrod",
+    title: "TheJoshBrod",
+    description: "Josh Brodsky — CS MSE at University of Michigan. I scale intelligent Agentic Systems from prototype to production-ready applications.",
+  },
+  twitter: {
+    card: "summary",
+    title: "TheJoshBrod",
+    description: "Josh Brodsky — CS MSE at University of Michigan. I scale intelligent Agentic Systems from prototype to production-ready applications.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

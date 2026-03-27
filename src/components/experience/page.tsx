@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useRef } from 'react';
 import experiences from '../../data/experiences.json';
 import ExperienceIntro from './ExperienceIntro';

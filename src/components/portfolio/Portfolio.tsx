@@ -1,60 +1,73 @@
 'use client';
 
 import Link from 'next/link';
+import type { ProjectMetadata } from '@/lib/projects';
 
-// Updated data layout for list view
-const projects = [
+// Projects without markdown files yet — shown as coming soon
+const comingSoonProjects = [
   {
-    id: 1,
-    year: '2025',
-    title: 'CGinS: LLM CUDA Compiler',
-    summary: 'Agentic Iterative Kernel Refinement',
-    url: '/projects/CUDA-Ghost-in-the-Shell'
-  },
-  {
-    id: 2,
-    year: '2025',
+    slug: 'WGSL-Transpiler',
     title: 'Triton -> WGSL: Transpiler',
     summary: 'High-performance WebGPU',
-    url: '/projects/WGSL-Transpiler'
+    date: '2025',
   },
   {
-    id: 3,
-    year: '2025',
+    slug: 'spark-telemetry',
     title: 'Spark Electric Racing: Live Telemetry',
     summary: 'Remote Motorcycle Diagnostics',
-    url: '#'
-  }
+    date: '2025',
+  },
 ];
 
-export default function Portfolio() {
+interface Props {
+  projects: ProjectMetadata[];
+}
+
+export default function Portfolio({ projects }: Props) {
   return (
     <div id="portfolio" className="max-w-5xl mx-auto px-8 md:px-16 relative z-10">
       <h2 className="text-sm font-mono text-gray-500 mb-8">[selected works]</h2>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col w-4xl">
         {projects.map((project) => (
           <Link
-            key={project.id}
-            href={project.url}
-            className="group flex flex-col md:flex-row md:items-baseline justify-between py-4 border-b border-gray-800 hover:border-gray-200 transition-colors"
+            key={project.slug}
+            href={`/projects/${project.slug}`}
+            className="group flex items-baseline justify-between gap-4 py-4 border-b border-gray-800 hover:border-gray-200 transition-colors"
           >
-            <div className="flex items-baseline gap-4 md:gap-12">
-              <span className="font-mono text-xs text-gray-600 group-hover:text-gray-400 transition-colors w-12">{project.year}</span>
-              <span className="text-lg md:text-xl text-gray-300 group-hover:text-white transition-colors font-medium">
+            <div className="flex items-baseline gap-4 md:gap-8 min-w-0">
+              <span className="font-mono text-xs text-gray-600 group-hover:text-gray-400 transition-colors shrink-0">
+                {project.date.match(/\d{4}/)?.[0] ?? project.date}
+              </span>
+              <span className="text-base md:text-lg text-gray-300 group-hover:text-white transition-colors font-medium truncate">
                 {project.title}
               </span>
             </div>
-
-            <span className="text-sm text-gray-500 group-hover:text-gray-400 transition-colors mt-2 md:mt-0 font-mono">
-              {project.summary}
+            <span className="text-xs text-gray-500 group-hover:text-gray-400 transition-colors font-mono shrink-0 hidden md:inline">
+              {project.description ?? ''}
             </span>
           </Link>
+        ))}
+
+        {comingSoonProjects.map((project) => (
+          <div
+            key={project.slug}
+            className="flex items-baseline justify-between gap-4 py-4 border-b border-gray-800 opacity-40 cursor-not-allowed"
+          >
+            <div className="flex items-baseline gap-4 md:gap-8 min-w-0">
+              <span className="font-mono text-xs text-gray-600 shrink-0">{project.date}</span>
+              <span className="text-base md:text-lg text-gray-300 font-medium truncate">{project.title}</span>
+            </div>
+            <span className="font-mono text-xs text-gray-600 shrink-0">[coming soon]</span>
+          </div>
         ))}
       </div>
 
       <div className="mt-12 text-center md:text-left">
-        <Link href="/projects" className="font-mono text-xs text-gray-500 hover:text-white border-b border-gray-800 hover:border-white pb-1 transition-all">
+        <Link
+          href="/projects"
+          className="font-mono text-xs text-gray-500 hover:text-white border-b border-gray-800 hover:border-white pb-1 transition-all"
+        >
           [view all projects]
         </Link>
       </div>

@@ -1,8 +1,8 @@
 ---
-title: "CUDA Ghost in the Shell (CGinS)"
-slug: "CUDA-Ghost-in-the-Shell"
-date: "Fall 2025 - Present"
-description: "LLM-driven CUDA Kernel Generator/Optimizer to enhance PyTorch's eager mode."
+title: "Kernel Forge"
+slug: "Kernel-Forge"
+date: "Fall 2026 - Present"
+description: "Agent based Kernel Optimizer for PyTorch workloads."
 technologies: ["PyTorch", "Python", "CUDA", "C++"]
 github: "https://github.com/TheJoshBrod/CGinS"
 paper: "https://raw.githubusercontent.com/TheJoshBrod/CGinS/main/CGinS-Paper.pdf"

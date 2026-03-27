@@ -1,8 +1,8 @@
 ---
-title: "Optimized CUDA-Accelerated Alpha-Beta Pruning"
+title: "Othello Engine"
 slug: "gpu-othello-game-search"
 date: "Fall 2025"
-description: "High-performance Othello engine leveraging hybrid CPU-GPU parallelism and shared transposition tables."
+description: "Parallelized alpha-beta search engine using CUDA."
 technologies: ["CUDA", "C++", "Python"]
 github: "https://github.com/TheJoshBrod/OthelloEngine-GPU"
 paper: "https://raw.githubusercontent.com/TheJoshBrod/OthelloEngine-GPU/main/methodology_and_performance_analysis.pdf"

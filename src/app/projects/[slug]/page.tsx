@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getAllProjects, getProjectBySlug } from '@/lib/projects';
@@ -7,6 +8,24 @@ import Footnote from '@/components/footnote/page';
 
 interface PageProps {
     params: Promise<{ slug: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { slug } = await params;
+    const project = getProjectBySlug(slug);
+
+    if (!project) return {};
+
+    return {
+        title: project.title,
+        description: project.description ?? `${project.title} — a project by Josh Brodsky`,
+        openGraph: {
+            title: project.title,
+            description: project.description ?? `${project.title} — a project by Josh Brodsky`,
+            type: 'article',
+            publishedTime: project.date,
+        },
+    };
 }
 
 export async function generateStaticParams() {
