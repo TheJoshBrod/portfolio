@@ -27,6 +27,7 @@ const STEPS = [
   { type: 'err',  text: 'no results found.' },
   { type: 'cmd',  text: 'sudo find / -name "page"' },
   { type: 'err',  text: 'nice try.' },
+  { type: 'cmd',  text: './lobster' },
   { type: 'art',  text: LOBSTER },
   { type: 'info', text: "looks like you're lost. let me help." },
   { type: 'link', text: '[go home]' },
