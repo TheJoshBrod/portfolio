@@ -45,7 +45,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
     return (
         <div className="min-h-screen bg-[#111] text-gray-300 font-mono relative overflow-hidden selection:bg-white selection:text-black">
-            <StarsBackground />
+            <StarsBackground parallax />
 
             <div className="relative z-10 container mx-auto px-6 md:px-12 py-12 max-w-5xl">
                 <nav className="mb-12 flex gap-6 text-xs text-gray-500 font-mono uppercase tracking-widest">

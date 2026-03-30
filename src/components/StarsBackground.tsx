@@ -1,8 +1,37 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
-export default function StarsBackground() {
+export default function StarsBackground({ parallax = false }: { parallax?: boolean }) {
+  const farRef = useRef<HTMLDivElement>(null);
+  const nearRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!parallax) return;
+    let rafId: number;
+    let startTime: number | null = null;
+
+    function tick(time: number) {
+      if (startTime === null) startTime = time;
+      const t = (time - startTime) / 1000;
+      const scrollY = window.scrollY;
+
+      if (farRef.current) {
+        const driftX = Math.sin(t * 0.12) * 30;
+        const driftY = Math.cos(t * 0.09) * 20 - scrollY * 0.05;
+        farRef.current.style.transform = `translate(${driftX}px, ${driftY}px)`;
+      }
+      if (nearRef.current) {
+        const driftX = Math.cos(t * 0.2) * 55;
+        const driftY = Math.sin(t * 0.15) * 40 - scrollY * 0.12;
+        nearRef.current.style.transform = `translate(${driftX}px, ${driftY}px)`;
+      }
+      rafId = requestAnimationFrame(tick);
+    }
+
+    rafId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafId);
+  }, [parallax]);
   // Starry Night ASCII Art Templates
   const asciiArt1 = `
                                                      +                                          +                  o                       .          
@@ -415,14 +444,38 @@ o     . * +                              .o       .                           ..
                                       ( (                                                             .                                               
                                        \`-'          '                                                                     o                           
 `
+  const allArts = [asciiArt5, asciiArt1, asciiArt2, asciiArt3, asciiArt4];
+  const tiled = Array(8).fill(allArts).flat();
+
+  const artPre = (art: string, i: number) => (
+    <pre key={i} className="text-[6px] md:text-[8px] leading-[1.0] text-gray-500 font-mono whitespace-pre text-center">
+      {art}
+    </pre>
+  );
+
+  if (parallax) {
+    const farArts  = tiled.filter((_, i) => i % 2 === 0);
+    const nearArts = tiled.filter((_, i) => i % 2 === 1);
+    return (
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none select-none">
+        <div ref={farRef} className="absolute inset-0 opacity-[0.2] flex items-center justify-center will-change-transform">
+          <div className="flex flex-wrap w-[200vw] -ml-[50vw] -mr-[50vw] justify-center gap-0">
+            {farArts.map(artPre)}
+          </div>
+        </div>
+        <div ref={nearRef} className="absolute inset-0 opacity-[0.35] flex items-center justify-center will-change-transform">
+          <div className="flex flex-wrap w-[200vw] -ml-[50vw] -mr-[50vw] justify-center gap-0">
+            {nearArts.map(artPre)}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none opacity-[0.3] flex items-center justify-center">
       <div className="flex flex-wrap w-[200vw] -ml-[50vw] -mr-[50vw] justify-center gap-0">
-        {Array(8).fill([asciiArt5, asciiArt1, asciiArt2, asciiArt3, asciiArt4]).flat().map((art, i) => (
-          <pre key={i} className="text-[6px] md:text-[8px] leading-[1.0] text-gray-500 font-mono whitespace-pre text-center">
-            {art}
-          </pre>
-        ))}
+        {tiled.map(artPre)}
       </div>
     </div>
   );

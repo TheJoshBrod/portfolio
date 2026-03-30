@@ -46,7 +46,7 @@ export default function NotFound() {
 
   return (
     <div className="min-h-screen bg-[#111] text-gray-300 font-mono relative overflow-hidden flex items-center justify-center">
-      <StarsBackground />
+      <StarsBackground parallax />
       <div className="relative z-10 flex flex-col gap-1 max-w-xl w-full px-8">
         {STEPS.slice(0, visible).map((step, i) => {
           if (step.type === 'cmd') {

@@ -1,6 +1,7 @@
 'use client';
 
 import StarsBackground from '../StarsBackground';
+import AsciiParticleText from '../AsciiParticleText';
 
 export default function Header() {
 
@@ -9,7 +10,7 @@ export default function Header() {
       <div className="min-h-screen w-full relative overflow-hidden bg-[#111]">
 
         {/* Starry Night Background: Tiled and Low Opacity */}
-        <StarsBackground />
+        <StarsBackground parallax />
 
         {/* Simple Text Navbar */}
         <div className="max-w-5xl mx-auto p-8 md:p-16 flex flex-col relative z-10 h-full">
@@ -29,15 +30,29 @@ export default function Header() {
 
           {/* Social Media Navbar */}
           <div className="flex flex-col items-center text-center gap-12 mt-20 relative z-10">
-            <div className="flex flex-col gap-6 max-w-2xl">
-              <div>
-                <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight text-white">Josh</h1>
-                <p className="text-gray-400 text-base md:text-lg font-mono">CS MSE @ University of Michigan</p>
+            <div className="flex flex-col items-center gap-6 w-full max-w-4xl">
+              <div className="">
+                <AsciiParticleText text="Josh Brodsky" className="mb-2" />
+                <h1 className="sr-only">Josh Brodsky</h1>
+                <AsciiParticleText
+                  text="CS MSE @ University of Michigan"
+                  desktopFontSize={18} mobileFontSize={16}
+                  fontWeight="normal"
+                  color="#9ca3af"
+                  delay={300}
+                />
               </div>
 
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl mx-auto">
-                I scale intelligent <span className="text-white">Agentic Systems</span> from prototype to production-ready applications.
-              </p>
+              <div className="w-full max-w-2xl mx-auto">
+                <AsciiParticleText
+                  text="I scale intelligent Agentic Systems from prototype to production-ready applications."
+                  desktopFontSize={20} mobileFontSize={18}
+                  fontWeight="normal"
+                  color="#d1d5db"
+                  wrap
+                  delay={600}
+                />
+              </div>
 
               <div className="flex justify-center gap-8 text-sm mt-6 text-gray-500 font-mono">
                 {[

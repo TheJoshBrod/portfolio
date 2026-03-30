@@ -10,13 +10,15 @@ export default function Home() {
   const projects = getAllProjects();
 
   return (
-    <div className="flex flex-col gap-32 pb-32 bg-[#111]">
+    <div className="flex flex-col">
       <Header />
-      <AboutMeSection />
-      <ExperienceSection />
-      <Portfolio projects={projects} />
-      <Contact />
-      <Footnote />
+      <div className="flex flex-col gap-32 pt-32 pb-32 bg-[#111]/60 relative z-10">
+        <AboutMeSection />
+        <ExperienceSection />
+        <Portfolio projects={projects} />
+        <Contact />
+        <Footnote />
+      </div>
     </div>
   );
 }

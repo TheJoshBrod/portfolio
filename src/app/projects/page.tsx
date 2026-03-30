@@ -10,7 +10,7 @@ export default function ProjectsPage() {
     return (
         <>
             <div className="min-h-screen w-full relative bg-[#111] overflow-hidden">
-                <StarsBackground />
+                <StarsBackground parallax />
 
                 <div className="flex flex-col items-center w-full max-w-5xl mx-auto px-6 md:px-12 pt-24 min-h-screen relative z-10">
                     <div className="w-full flex justify-between items-center mb-16 border-b border-gray-800 pb-6">
