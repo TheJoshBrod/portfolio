@@ -7,7 +7,7 @@ export default function Header() {
 
   return (
     <div className="relative">
-      <div className="min-h-screen w-full relative overflow-hidden bg-[#111]">
+      <div className="h-screen w-full relative overflow-hidden bg-[#111]">
 
         {/* Starry Night Background: Tiled and Low Opacity */}
         <StarsBackground parallax />
@@ -15,7 +15,7 @@ export default function Header() {
         {/* Simple Text Navbar */}
         <div className="max-w-5xl mx-auto p-8 md:p-16 flex flex-col relative z-10 h-full">
           <div className="flex flex-row justify-center ">
-            <nav className="flex gap-4 text-sm mb-24 text-gray-500 font-mono">
+            <nav className="flex gap-4 text-sm text-gray-500 font-mono">
               {['about', 'experience', 'portfolio', 'contact'].map((item) => (
                 <a
                   key={item}
@@ -29,7 +29,7 @@ export default function Header() {
           </div>
 
           {/* Social Media Navbar */}
-          <div className="flex flex-col items-center text-center gap-12 mt-20 relative z-10">
+          <div className="flex-1 flex flex-col items-center justify-center text-center gap-12 relative z-10">
             <div className="flex flex-col items-center gap-6 w-full max-w-4xl">
               <div className="">
                 <AsciiParticleText text="Josh Brodsky" className="mb-2" />
