@@ -10,7 +10,7 @@ export default function Education() {
                 <div className="flex flex-col gap-2 relative">
                     <div className="absolute -left-[31px] top-1.5 w-2.5 h-2.5 bg-gray-600 rounded-full border-2 border-[#111]"></div>
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
-                        <h3 className="text-white font-mono font-bold text-lg">MSE Computer Science</h3>
+                        <h3 className="text-white font-mono font-bold text-lg">Masters Computer Science</h3>
                         <span className="text-gray-500 text-sm font-mono">Spring 2026*</span>
                     </div>
 
@@ -28,7 +28,7 @@ export default function Education() {
                 <div className="flex flex-col gap-2 relative">
                     <div className="absolute -left-[31px] top-1.5 w-2.5 h-2.5 bg-gray-800 rounded-full border-2 border-[#111]"></div>
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
-                        <h3 className="text-gray-300 font-mono font-bold text-lg">BSE Computer Science</h3>
+                        <h3 className="text-gray-300 font-mono font-bold text-lg">Bachelors Computer Science</h3>
                         <span className="text-gray-500 text-sm font-mono">Spring 2025</span>
                     </div>
 

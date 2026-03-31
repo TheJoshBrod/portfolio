@@ -7,17 +7,17 @@ export const metadata: Metadata = {
     default: "TheJoshBrod",
     template: "%s | TheJoshBrod",
   },
-  description: "Josh Brodsky — CS MSE at University of Michigan. I scale intelligent Agentic Systems from prototype to production-ready applications.",
+  description: "Josh Brodsky - CS Masters at University of Michigan. I scale intelligent Agentic Systems from prototype to production-ready applications.",
   openGraph: {
     type: "website",
     siteName: "TheJoshBrod",
     title: "TheJoshBrod",
-    description: "Josh Brodsky — CS MSE at University of Michigan. I scale intelligent Agentic Systems from prototype to production-ready applications.",
+    description: "Josh Brodsky - CS Masters at University of Michigan. I scale intelligent Agentic Systems from prototype to production-ready applications.",
   },
   twitter: {
     card: "summary",
     title: "TheJoshBrod",
-    description: "Josh Brodsky — CS MSE at University of Michigan. I scale intelligent Agentic Systems from prototype to production-ready applications.",
+    description: "Josh Brodsky - CS Masters at University of Michigan. I scale intelligent Agentic Systems from prototype to production-ready applications.",
   },
   robots: {
     index: true,

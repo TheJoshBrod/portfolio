@@ -35,7 +35,7 @@ export default function Header() {
                 <AsciiParticleText text="Josh Brodsky" className="mb-2" />
                 <h1 className="sr-only">Josh Brodsky</h1>
                 <AsciiParticleText
-                  text="CS MSE @ University of Michigan"
+                  text="CS Masters @ University of Michigan"
                   desktopFontSize={18} mobileFontSize={16}
                   fontWeight="normal"
                   color="#9ca3af"
